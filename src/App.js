@@ -5,6 +5,8 @@ import { Navbar, NavbarBrand, Nav, NavItem, NavLink, Card, Button, CardBody, Car
 import classnames from 'classnames';
 
 import bg from './images/nyc.jpg'
+import pic1 from './images/victoria.jpg'
+import pic2 from './images/tokyo.jpg'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -18,7 +20,7 @@ const App = (props) => {
 
 
     return (
-        <div className="Container" style={{ backgroundImage:'linear-gradient(0.35turn, #ffccff, #ebf8e1, #ccccff)' }}>
+        <div className="Container" style={{ backgroundImage: 'linear-gradient(0.35turn, #ffccff, #ebf8e1, #ccccff)' }}>
 
             <Navbar color="dark" light>
                 <NavbarBrand href="/" className="mr-auto"><div style={{ fontFamily: 'Pacifico', color: '#80d4ff' }}>
@@ -41,23 +43,29 @@ const App = (props) => {
 
 
             </Navbar>
-            <Image src={bg} fluid style={{ width: '100%', height: '80%', backgroundImage: 'linear-gradient(to right bottom, #e66465, #9198e5)'}}></Image>
+            <Image src={bg} fluid style={{ width: '100%', height: '80%', backgroundImage: 'linear-gradient(to right bottom, #e66465, #9198e5)' }}></Image>
             <div className='ui container'>
                 <Nav tabs style={{ textAlign: 'left' }}>
                     <NavItem>
                         <NavLink
                             className={classnames({ active: activeTab === '1' })}
-                            onClick={() => { toggle('1'); }}
-                        >
+                            onClick={() => { toggle('1'); }}>
                             <h2 style={{ fontFamily: 'Pacifico' }}>About me</h2>
                         </NavLink>
                     </NavItem>
                     <NavItem>
                         <NavLink
                             className={classnames({ active: activeTab === '2' })}
-                            onClick={() => { toggle('2'); }}
-                        >
+                            onClick={() => { toggle('2'); }}>
                             <h2 style={{ fontFamily: 'Pacifico' }}>Projects</h2>
+                        </NavLink>
+                    </NavItem>
+
+                    <NavItem>
+                        <NavLink
+                            className={classnames({ active: activeTab === '3' })}
+                            onClick={() => { toggle('3') }}>
+                            <h2 style={{ fontFamily: 'Pacifico' }}>Travels</h2>
                         </NavLink>
                     </NavItem>
                 </Nav>
@@ -71,7 +79,7 @@ const App = (props) => {
                                 <div className='row' style={{ width: '100%' }}>
                                     <div className='col' style={{ textAlign: 'center', fontFamily: 'Georgia' }}>
                                         <h2 >About me</h2>
-                                        <p>Learning to create powerful application to change the world. My passions are traveling, learning, and being active</p>
+                                        <p>Motivated individual who is trying to learn the technologies that would change the world. Learning to create powerful application to change the world. My passions are traveling, learning, and being active</p>
 
                                         <Card style={{ width: '18rem' }}>
                                             <CardImg variant='top' src={bg}></CardImg>
@@ -137,6 +145,36 @@ const App = (props) => {
 
                                     <Card style={{ width: '18rem' }}>
                                         <CardImg variant='top' src={bg}></CardImg>
+                                        <CardBody></CardBody>
+                                    </Card>
+                                </div>
+                            </Col>
+                        </Row>
+                    </TabPane>
+
+                    {/* Travels */}
+                    <TabPane tabId="3">
+                        <Row>
+                        <Col sm="6">
+                                <Card body>
+                                    <CardTitle>Special Title Treatment</CardTitle>
+                                    <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
+                                    <Button>Go somewhere</Button>
+                                </Card>
+
+                                {/* TODO: Add Project tab */}
+
+
+                                <div className='col'>
+                                    <Card style={{ width: '25rem' }}>
+                                        <CardImg variant='top' src={pic1}></CardImg>
+                                        <CardBody style={{textAlign:'center', fontFamily:'Pacifico'}}>Victoria Harbor at dawn</CardBody>
+                                    </Card>
+
+                                    <br></br>
+
+                                    <Card style={{ width: '25rem' }}>
+                                        <CardImg variant='top' src={pic2}></CardImg>
                                         <CardBody></CardBody>
                                     </Card>
                                 </div>
