@@ -7,6 +7,7 @@ import classnames from 'classnames';
 import bg from './images/nyc.jpg'
 import pic1 from './images/victoria.jpg'
 import pic2 from './images/tokyo.jpg'
+import logo from './images/logo.jpg'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -24,7 +25,19 @@ const App = (props) => {
 
             <Navbar color="dark" light>
                 <NavbarBrand href="/" className="mr-auto"><div style={{ fontFamily: 'Pacifico', color: '#80d4ff' }}>
-                    <h2>Liang Li</h2></div>
+                    <div className='row'>
+
+                        <img
+                            alt=""
+                            src={logo}
+                            width="50"
+                            height="50"
+                            className="d-inline-block align-center"
+                            style={{ borderRadius: "25px" }}
+                        />
+                        <h1> Liang Li</h1>
+                    </div>
+                </div>
                 </NavbarBrand>
 
                 <Button color="primary" >Menu</Button>
@@ -102,10 +115,10 @@ const App = (props) => {
                     <TabPane tabId="2">
                         <Row>
                             <Col sm="6">
-                                <Card body>
-                                    <CardTitle>Special Title Treatment</CardTitle>
+                                <Card body style={{ fontFamily: 'Pacifico', borderRadius: '7px' }}>
+                                    <CardTitle ><h3>Projects in Github</h3></CardTitle>
                                     <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
-                                    <Button>Go somewhere</Button>
+                                    <Button href='https://github.com/TheAllen'>Check out Projects</Button>
                                 </Card>
 
                                 {/* TODO: Add Project tab */}
@@ -154,8 +167,8 @@ const App = (props) => {
 
                     {/* Travels */}
                     <TabPane tabId="3">
-                        <Row>
-                        <Col sm="6">
+                        <div>
+                            <Col sm="6">
                                 <Card body>
                                     <CardTitle>Special Title Treatment</CardTitle>
                                     <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
@@ -164,22 +177,22 @@ const App = (props) => {
 
                                 {/* TODO: Add Project tab */}
 
+                                <Card style={{ width: '25rem' }}>
+                                    <CardImg variant='top' src={pic1}></CardImg>
+                                    <CardBody style={{ textAlign: 'center', fontFamily: 'Pacifico' }}>Victoria Harbor at dawn</CardBody>
+                                </Card>
 
-                                <div className='col'>
-                                    <Card style={{ width: '25rem' }}>
-                                        <CardImg variant='top' src={pic1}></CardImg>
-                                        <CardBody style={{textAlign:'center', fontFamily:'Pacifico'}}>Victoria Harbor at dawn</CardBody>
-                                    </Card>
+                                <br></br>
 
-                                    <br></br>
+                                <Card style={{ width: '25rem' }}>
+                                    <CardImg variant='top' src={pic2}></CardImg>
+                                    <CardBody style={{ textAlign: 'center', fontFamily: 'Pacifico' }}>Looking down on top of Tokyo</CardBody>
+                                </Card>
 
-                                    <Card style={{ width: '25rem' }}>
-                                        <CardImg variant='top' src={pic2}></CardImg>
-                                        <CardBody></CardBody>
-                                    </Card>
-                                </div>
                             </Col>
-                        </Row>
+
+                        </div>
+
                     </TabPane>
                 </TabContent>
             </div>
