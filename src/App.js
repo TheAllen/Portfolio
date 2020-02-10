@@ -4,6 +4,8 @@ import { Image } from 'react-bootstrap';
 import { Navbar, NavbarBrand, Nav, NavItem, NavLink, Card, Button, CardBody, CardImg, Row, Col, TabPane, CardTitle, CardText, TabContent, Collapse, } from 'reactstrap';
 import classnames from 'classnames';
 
+import SlideShow from './components/SlideShow';
+
 import bg from './images/nyc.jpg'
 import pic1 from './images/victoria.jpg'
 import pic2 from './images/tokyo.jpg'
@@ -54,9 +56,9 @@ const App = (props) => {
                 </Collapse>
 
 
-
             </Navbar>
             <Image src={bg} fluid style={{ width: '100%', height: '80%', backgroundImage: 'linear-gradient(to right bottom, #e66465, #9198e5)' }}></Image>
+
             <div className='ui container'>
                 <Nav tabs style={{ textAlign: 'left' }}>
                     <NavItem>
@@ -168,28 +170,42 @@ const App = (props) => {
                     {/* Travels */}
                     <TabPane tabId="3">
                         <div>
-                            <Col sm="6">
-                                <Card body>
-                                    <CardTitle>Special Title Treatment</CardTitle>
-                                    <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
-                                    <Button>Go somewhere</Button>
-                                </Card>
+                            <Row>
 
-                                {/* TODO: Add Project tab */}
+                                <Col sm="6">
+                                    <Card body>
+                                        <CardTitle>Special Title Treatment</CardTitle>
+                                        <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
+                                        <Button>Go somewhere</Button>
+                                    </Card>
 
-                                <Card style={{ width: '25rem' }}>
-                                    <CardImg variant='top' src={pic1}></CardImg>
-                                    <CardBody style={{ textAlign: 'center', fontFamily: 'Pacifico' }}>Victoria Harbor at dawn</CardBody>
-                                </Card>
+                                    {/* TODO: Add Project tab */}
 
+
+                                </Col>
+                                <Col sm='6'>
+
+                                    <SlideShow ></SlideShow>
+                                </Col>
+                                
+
+                                <Col sm='6'>
+                                    <Card style={{ width: '25rem' }}>
+                                        <CardImg variant='top' src={pic1}></CardImg>
+                                        <CardBody style={{ textAlign: 'center', fontFamily: 'Pacifico' }}>Victoria Harbor at dawn</CardBody>
+                                    </Card>
+                                </Col>
+                                {/* Line break */}
                                 <br></br>
+                                <Col sm='6'>
+                                    <Card style={{ width: '25rem' }}>
+                                        <CardImg variant='top' src={pic2}></CardImg>
+                                        <CardBody style={{ textAlign: 'center', fontFamily: 'Pacifico' }}>Looking down on top of Tokyo</CardBody>
+                                    </Card>
 
-                                <Card style={{ width: '25rem' }}>
-                                    <CardImg variant='top' src={pic2}></CardImg>
-                                    <CardBody style={{ textAlign: 'center', fontFamily: 'Pacifico' }}>Looking down on top of Tokyo</CardBody>
-                                </Card>
+                                </Col>
 
-                            </Col>
+                            </Row>
 
                         </div>
 
