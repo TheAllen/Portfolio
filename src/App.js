@@ -8,11 +8,13 @@ import { Navbar, NavbarBrand, Nav, NavItem, NavLink,
 import classnames from 'classnames';
 
 import SlideShow from './components/SlideShow';
+import CardsSlide from './components/CardsSlide';
 
 import bg from './images/nyc.jpg'
 import pic1 from './images/victoria.jpg'
 import pic2 from './images/tokyo.jpg'
 import logo from './images/logo.jpg'
+import frontend from './images/frontend.png'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -99,6 +101,8 @@ const App = (props) => {
                                     <div className='col' style={{ textAlign: 'center', fontFamily: 'Georgia' }}>
                                         <h2 >About me</h2>
                                         <p>Motivated individual who is trying to learn the technologies that would change the world. Learning to create powerful application to change the world. My passions are traveling, learning, and being active</p>
+
+                                        <CardsSlide imagePath={frontend} title={"Frontend"}></CardsSlide>
 
                                         <Card style={{ width: '18rem' }}>
                                             <CardImg variant='top' src={bg}></CardImg>
