@@ -1,7 +1,10 @@
 import React, { Component, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Image } from 'react-bootstrap';
-import { Navbar, NavbarBrand, Nav, NavItem, NavLink, Card, Button, CardBody, CardImg, Row, Col, TabPane, CardTitle, CardText, TabContent, Collapse, } from 'reactstrap';
+import { Navbar, NavbarBrand, Nav, NavItem, NavLink, 
+    Card, Button, CardBody, CardImg, Row, Col, TabPane, 
+    CardTitle, CardText, TabContent, Collapse, ButtonDropdown,
+    DropdownToggle, DropdownMenu, DropdownItem} from 'reactstrap';
 import classnames from 'classnames';
 
 import SlideShow from './components/SlideShow';
@@ -15,11 +18,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = (props) => {
 
+    //Tabs
     const [activeTab, setActiveTab] = useState('1');
-
     const toggle = tab => {
         if (activeTab !== tab) setActiveTab(tab);
     }
+
+    //Navbar button dropdown
+    const [dropdownOpen, setOpen] = useState(false);
+    const menuToggle = () => setOpen(!dropdownOpen);
 
 
     return (
@@ -42,18 +49,15 @@ const App = (props) => {
                 </div>
                 </NavbarBrand>
 
-                <Button color="primary" >Menu</Button>
-
-                <Collapse navbar >
-                    <Nav>
-                        <NavItem>
-                            <NavLink href="/components/">Components</NavLink>
-                        </NavItem>
-                        <NavItem>
-                            <NavLink href="https://github.com/TheAllen">GitHub</NavLink>
-                        </NavItem>
-                    </Nav>
-                </Collapse>
+                {/* <Button color="primary" >Menu</Button> */}
+                <ButtonDropdown isOpen={dropdownOpen} toggle={menuToggle} direction="left">
+                    <DropdownToggle carpet style={{fontFamily:"Pacifico"}}>Menu</DropdownToggle>
+                    <DropdownMenu >
+                        <DropdownItem href="https://github.com/TheAllen"><body>Github</body></DropdownItem>
+                        <DropdownItem divider></DropdownItem>
+                        <DropdownItem>Contact me</DropdownItem>
+                    </DropdownMenu>
+                </ButtonDropdown>
 
 
             </Navbar>
@@ -187,7 +191,7 @@ const App = (props) => {
 
                                     <SlideShow ></SlideShow>
                                 </Col>
-                                
+
 
                                 <Col sm='6'>
                                     <Card style={{ width: '25rem' }}>
