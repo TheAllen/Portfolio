@@ -1,14 +1,17 @@
 import React, { Component, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Image } from 'react-bootstrap';
-import { Navbar, NavbarBrand, Nav, NavItem, NavLink, 
-    Card, Button, CardBody, CardImg, Row, Col, TabPane, 
+import {
+    Navbar, NavbarBrand, Nav, NavItem, NavLink,
+    Card, Button, CardBody, CardImg, Row, Col, TabPane,
     CardTitle, CardText, TabContent, Collapse, ButtonDropdown,
-    DropdownToggle, DropdownMenu, DropdownItem} from 'reactstrap';
+    DropdownToggle, DropdownMenu, DropdownItem
+} from 'reactstrap';
 import classnames from 'classnames';
 
 import SlideShow from './components/SlideShow';
 import CardsSlide from './components/CardsSlide';
+import Cards from './components/Cards';
 
 import bg from './images/nyc.jpg'
 import pic1 from './images/victoria.jpg'
@@ -53,7 +56,7 @@ const App = (props) => {
 
                 {/* <Button color="primary" >Menu</Button> */}
                 <ButtonDropdown isOpen={dropdownOpen} toggle={menuToggle} direction="left">
-                    <DropdownToggle carpet style={{fontFamily:"Pacifico"}}>Menu</DropdownToggle>
+                    <DropdownToggle carpet style={{ fontFamily: "Pacifico" }}>Menu</DropdownToggle>
                     <DropdownMenu >
                         <DropdownItem href="https://github.com/TheAllen"><body>Github</body></DropdownItem>
                         <DropdownItem divider></DropdownItem>
@@ -102,7 +105,8 @@ const App = (props) => {
                                         <h2 >About me</h2>
                                         <p>Motivated individual who is trying to learn the technologies that would change the world. Learning to create powerful application to change the world. My passions are traveling, learning, and being active</p>
 
-                                        <CardsSlide imagePath={frontend} title={"Frontend"}></CardsSlide>
+
+                                        <Cards></Cards>
 
                                         <Card style={{ width: '18rem' }}>
                                             <CardImg variant='top' src={bg}></CardImg>
@@ -125,6 +129,9 @@ const App = (props) => {
                     <TabPane tabId="2">
                         <Row>
                             <Col sm="6">
+                                {/* Cards for projects */}
+                                <CardsSlide imagePath={frontend} title={"Frontend"}></CardsSlide>
+
                                 <Card body style={{ fontFamily: 'Pacifico', borderRadius: '7px' }}>
                                     <CardTitle ><h3>Projects in Github</h3></CardTitle>
                                     <CardText>With supporting text below as a natural lead-in to additional content.</CardText>

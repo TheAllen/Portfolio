@@ -1,14 +1,19 @@
 import React from 'react';
+import "./card-style.css";
 
 const CardsSlide = (props) => {
 
-    return(
+    return (
         <div className="card text-center">
             <div className="overflow">
-                <img src={props.imagePath} alt="Card Image"></img>
+                <img src={props.imagePath} alt="Card Image" className="card-img-top" style={{height:"150px"}}></img>
             </div>
             <div className="card-body text-dark">
                 <h4 className="card-title">{props.title}</h4>
+                <p className="card-text text-secondary">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                </p>
+                <a href="https://github.com/TheAllen" className="btn btn-outline-success">Source Code</a>
             </div>
         </div>
     );
