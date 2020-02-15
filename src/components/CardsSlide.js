@@ -11,7 +11,7 @@ const CardsSlide = (props) => {
             <div className="card-body text-dark">
                 <h4 className="card-title">{props.title}</h4>
                 <p className="card-text text-secondary">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                    {props.text}
                 </p>
                 <a href="https://github.com/TheAllen" className="btn btn-outline-success">Source Code</a>
             </div>
