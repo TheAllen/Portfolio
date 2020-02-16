@@ -58,7 +58,7 @@ const App = (props) => {
                 <ButtonDropdown isOpen={dropdownOpen} toggle={menuToggle} direction="left">
                     <DropdownToggle carpet style={{ fontFamily: "Pacifico" }}>Menu</DropdownToggle>
                     <DropdownMenu >
-                        <DropdownItem href="https://github.com/TheAllen"><body>Github</body></DropdownItem>
+                        <DropdownItem href="https://github.com/TheAllen">Github</DropdownItem>
                         <DropdownItem divider></DropdownItem>
                         <DropdownItem>Contact me</DropdownItem>
                     </DropdownMenu>
