@@ -35,6 +35,7 @@ const App = (props) => {
 
 
     return (
+        // 0.35turn
         <div className="Container" style={{ backgroundImage: 'linear-gradient(0.35turn, #ffccff, #ebf8e1, #ccccff)' }}>
 
             <Navbar color="dark" light>
@@ -66,7 +67,14 @@ const App = (props) => {
 
 
             </Navbar>
-            <Image src={bg} fluid style={{ width: '100%', height: '80%', backgroundImage: 'linear-gradient(to right bottom, #e66465, #9198e5)' }}></Image>
+
+
+            <Image src={bg} fluid style={{ width: '100%', height: '80%', backgroundImage: 'linear-gradient(to right bottom, #e66465, #9198e5)', position: "relative", zIndex: "1" }}></Image>
+
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
 
             <div className='ui container'>
                 <Nav tabs style={{ textAlign: 'left' }}>
