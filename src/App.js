@@ -110,10 +110,10 @@ const App = (props) => {
                                 {/* TODO: Refactor this to another component */}
                                 <div className='row' style={{ width: '100%' }}>
                                     <div className='col' style={{ textAlign: 'center', fontFamily: 'Georgia' }}>
-                                        <h2 >About me</h2>
-                                        <p>Motivated individual who is trying to learn the technologies that would change the world. Learning to create powerful application to change the world. My passions are traveling, learning, and being active</p>
+                                        <h2 >Technology</h2>
+                                        <p>The Technology Stacks I have worked with</p>
 
-
+                                        {/* The four tech cards */}
                                         <Cards></Cards>
 
                                         <Card style={{ width: '18rem' }}>
