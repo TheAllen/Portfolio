@@ -19,6 +19,8 @@ import pic2 from './images/tokyo.jpg'
 import logo from './images/logo.jpg'
 import frontend from './images/frontend.png'
 
+import visualization from './images/Lyon.png'
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = (props) => {
@@ -59,7 +61,7 @@ const App = (props) => {
                 <ButtonDropdown isOpen={dropdownOpen} toggle={menuToggle} direction="left">
                     <DropdownToggle carpet style={{ fontFamily: "Pacifico" }}>Menu</DropdownToggle>
                     <DropdownMenu >
-                        <DropdownItem href="https://github.com/TheAllen"><body>Github</body></DropdownItem>
+                        <DropdownItem href="https://github.com/TheAllen">Github</DropdownItem>
                         <DropdownItem divider></DropdownItem>
                         <DropdownItem>Contact me</DropdownItem>
                     </DropdownMenu>
@@ -138,7 +140,10 @@ const App = (props) => {
                         <Row>
                             <Col sm="6">
                                 {/* Cards for projects */}
-                                <CardsSlide imagePath={frontend} title={"Frontend"}></CardsSlide>
+
+
+                                <CardsSlide imagePath={visualization} title={"3D Visualization"}></CardsSlide>
+
 
                                 <Card body style={{ fontFamily: 'Pacifico', borderRadius: '7px' }}>
                                     <CardTitle ><h3>Projects in Github</h3></CardTitle>
