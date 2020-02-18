@@ -13,7 +13,7 @@ const CardsSlide = (props) => {
                 <p className="card-text text-secondary">
                     {props.text}
                 </p>
-                <a href="https://github.com/TheAllen" className="btn btn-outline-success">Source Code</a>
+                {/* <a href="https://github.com/TheAllen" className="btn btn-outline-success">Source Code</a> */}
             </div>
         </div>
     );
