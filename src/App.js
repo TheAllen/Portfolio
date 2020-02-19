@@ -142,7 +142,11 @@ const App = (props) => {
                                 {/* Cards for projects */}
 
 
-                                <CardsSlide imagePath={visualization} title={"3D Visualization"}></CardsSlide>
+                                <CardsSlide
+                                    imagePath={visualization}
+                                    title={"3D Visualization"}
+                                    content={<button className="ui button primary">button</button>}
+                                ></CardsSlide>
 
 
                                 <Card body style={{ fontFamily: 'Pacifico', borderRadius: '7px' }}>

@@ -28,6 +28,20 @@ const items = [
         caption: 'Central',
         header: 'Hong Kong',
         key: '3'
+    },
+    {
+        src: hk,
+        altText: 'Slide 3',
+        caption: 'Central',
+        header: 'Hong Kong',
+        key: '4'
+    },
+    {
+        src: hk,
+        altText: 'Slide 3',
+        caption: 'Central',
+        header: 'Hong Kong',
+        key: '5'
     }
 
 ];
