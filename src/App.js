@@ -9,6 +9,7 @@ import {
 } from 'reactstrap';
 import classnames from 'classnames';
 
+import CardModal from './components/CardModal';
 import SlideShow from './components/SlideShow';
 import CardsSlide from './components/CardsSlide';
 import Cards from './components/Cards';
@@ -145,9 +146,10 @@ const App = (props) => {
                                 <CardsSlide
                                     imagePath={visualization}
                                     title={"3D Visualization"}
-                                    content={<button className="ui button primary">button</button>}
+                                    content={<CardModal modalTitle="3D City Visualization" buttonLabel="See Demo"></CardModal>}
                                 ></CardsSlide>
 
+                                
 
                                 <Card body style={{ fontFamily: 'Pacifico', borderRadius: '7px' }}>
                                     <CardTitle ><h3>Projects in Github</h3></CardTitle>
