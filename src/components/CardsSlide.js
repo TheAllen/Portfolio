@@ -4,9 +4,9 @@ import "./card-style.css";
 const CardsSlide = (props) => {
 
     return (
-        <div className="card text-center">
+        <div className="card text-center" style={{fontFamily:"pacifico"}}>
             <div className="overflow">
-                <img src={props.imagePath} alt="Card Image" className="card-img-top" style={{height:"150px"}}></img>
+                <img src={props.imagePath} alt="Card Image" className="card-img-top" style={{height:"250px"}}></img>
             </div>
             <div className="card-body text-dark">
                 <h4 className="card-title">{props.title}</h4>

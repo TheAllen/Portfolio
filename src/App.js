@@ -4,7 +4,7 @@ import { Image } from 'react-bootstrap';
 import {
     Navbar, NavbarBrand, Nav, NavItem, NavLink,
     Card, Button, CardBody, CardImg, Row, Col, TabPane,
-    CardTitle, CardText, TabContent, Collapse, ButtonDropdown,
+    CardTitle, CardText, TabContent, ButtonDropdown,
     DropdownToggle, DropdownMenu, DropdownItem
 } from 'reactstrap';
 import classnames from 'classnames';
@@ -20,6 +20,7 @@ import pic2 from './images/tokyo.jpg'
 import logo from './images/logo.jpg'
 import frontend from './images/frontend.png'
 
+import sylvanas from './images/sylvanas.png';
 import visualization from './images/Lyon.png'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -27,7 +28,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const App = (props) => {
 
     //Tabs
-    const [activeTab, setActiveTab] = useState('1');
+    const [activeTab, setActiveTab] = useState('2');
     const toggle = tab => {
         if (activeTab !== tab) setActiveTab(tab);
     }
@@ -43,7 +44,7 @@ const App = (props) => {
 
             <Navbar color="dark" light>
                 <NavbarBrand href="/" className="mr-auto"><div style={{ fontFamily: 'Pacifico', color: '#80d4ff' }}>
-                    <div className='row'>
+                    <div className="row">
 
                         <img
                             alt=""
@@ -53,7 +54,7 @@ const App = (props) => {
                             className="d-inline-block align-center"
                             style={{ borderRadius: "25px" }}
                         />
-                        <h1> Liang Li</h1>
+                        <h1>Liang Li</h1>
                     </div>
                 </div>
                 </NavbarBrand>
@@ -80,7 +81,7 @@ const App = (props) => {
             <br></br>
 
             <div className='ui container'>
-                <Nav tabs style={{ textAlign: 'left' }}>
+                <Nav tabs>
                     <NavItem>
                         <NavLink
                             className={classnames({ active: activeTab === '1' })}
@@ -142,19 +143,44 @@ const App = (props) => {
                             <Col sm="6">
                                 {/* Cards for projects */}
 
-
+                                {/* 3D Visualization Project */}
                                 <CardsSlide
                                     imagePath={visualization}
-                                    title={"3D Visualization"}
-                                    content={<CardModal modalTitle="3D City Visualization" buttonLabel="See Demo"></CardModal>}
+                                    title={"City Visualization 3D"}
+                                    text={"This app generates beautiful 3D models of famous Cities around the world!"}
+                                    content={<CardModal modalTitle="City Visualization 3D" buttonLabel="See Demo" content="Built using Leaflet and Esri ArcGIS api"></CardModal>}
                                 ></CardsSlide>
 
-                                
+                                <hr
+                                    style={{
+                                        color: 'blue',
+                                        // backgroundColor: 'blue',
+                                        height: 1
 
-                                <Card body style={{ fontFamily: 'Pacifico', borderRadius: '7px' }}>
-                                    <CardTitle ><h3>Projects in Github</h3></CardTitle>
-                                    <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
-                                    <Button href='https://github.com/TheAllen'>Check out Projects</Button>
+                                    }}
+                                />
+
+                                {/* TODO add more projects */}
+                                <CardsSlide
+                                    imagePath={sylvanas}
+                                    title={"OpenGL 3D Model"}
+                                    text={"App that allows you to load OBJ models in and view/edit the model. Implemented a quaternion-based camera"}
+                                    content={<CardModal modalTitle="3D Model Loader" buttonLabel="See Demo"></CardModal>}
+                                ></CardsSlide>
+
+                                <hr
+                                    style={{
+                                        color: 'blue',
+                                        height: 1
+
+                                    }}
+                                />
+
+                                {/* All Projects --> Github */}
+                                <Card body style={{ fontFamily: 'Pacifico', borderRadius: '7px', textAlign: 'center' }}>
+                                    <CardTitle ><h3>All Projects</h3></CardTitle>
+                                    <CardText>This is my Github containing all my other Projects</CardText>
+                                    <Button color='primary' href='https://github.com/TheAllen'>Check out Projects</Button>
                                 </Card>
 
                                 {/* TODO: Add Project tab */}
@@ -174,7 +200,23 @@ const App = (props) => {
                                     </Card>
                                 </div>
                             </Col>
+
                             <Col sm="6">
+
+                                <CardsSlide
+                                    imagePath={visualization}
+                                    title={"3D Visualization"}
+                                    content={<CardModal modalTitle="Streaming App" buttonLabel="See Demo"></CardModal>}
+                                ></CardsSlide>
+                                
+                                <hr
+                                    style={{
+                                        color: 'blue',
+                                        height: 1
+
+                                    }}
+                                />
+
                                 <Card body>
                                     <CardTitle>Special Title Treatment</CardTitle>
                                     <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
