@@ -7,7 +7,8 @@ const CardModal = (props) => {
         modalTitle,
         buttonLabel,
         className,
-        content
+        content,
+        linkTo
     } = props;
 
     const [modal, setModal] = useState(false);
@@ -24,7 +25,7 @@ const CardModal = (props) => {
                 </video>
                 <p style={{ fontFamily: "Georgia", marginLeft: '20px', marginTop: '15px' }}>{content}</p>
                 <ModalFooter>
-                    <Button color="primary" onClick={toggle}>Do Something</Button>{' '}
+                    <Button color="primary" onClick={toggle}>Source Code</Button>{' '}
                     <Button color="secondary" onClick={toggle}>Cancel</Button>
                 </ModalFooter>
             </Modal>

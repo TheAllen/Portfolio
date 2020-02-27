@@ -165,7 +165,8 @@ const App = (props) => {
                                     imagePath={sylvanas}
                                     title={"OpenGL 3D Model"}
                                     text={"App that allows you to load OBJ models in and view/edit the model. Implemented a quaternion-based camera"}
-                                    content={<CardModal modalTitle="3D Model Loader" buttonLabel="See Demo"></CardModal>}
+                                    content={<CardModal modalTitle="3D Model Loader" buttonLabel="See Demo" content="The objective of this project was to learn about advanced camera concepts and loading large OBJ models to a scene. Learned a lot about how to work with OpenGL."
+                                    ></CardModal>}
                                 ></CardsSlide>
 
                                 <hr
