@@ -83,7 +83,8 @@ const App = (props) => {
             <br></br>
             <br></br>
             <br></br> */}
-            <Image src={bg} fluid style={{ width: '100%', height: '80%', position: "relative", zIndex: "0" }}></Image>
+            {/* <div fluid style={{backgroundImage:{bg}, width: '100%'}}></div> */}
+            <Image src={bg} fluid style={{ width: '100%', height: '80%', position: "relative", zIndex: "0" , opacity:"0.80"}}></Image>
 
 
 
@@ -107,12 +108,8 @@ const App = (props) => {
                     }
                 }} style={{ marginTop: '-800px', zIndex: 999 }} />
 
-            {/* <br></br>
-            <br></br>
-            <br></br>
-            <br></br> */}
 
-            <div className='ui container' style={{ marginTop: '-10px', backgroundImage: 'linear-gradient(0.35turn, #ffccff, #ebf8e1, #ccccff)', borderRadius: "8px", zIndex: "1" }}>
+            <div className="ui container" style={{ marginTop:'10px', backgroundImage: 'linear-gradient(0.35turn, #ffccff, #ebf8e1, #ccccff)', borderRadius: "8px", zIndex: "1" , width:'100%'}}>
                 <Nav tabs style={{ cursor: 'pointer' }}>
                     <NavItem>
                         <NavLink
@@ -147,8 +144,9 @@ const App = (props) => {
                                 <div className='row' style={{ width: '100%' }}>
                                     <div className='col' style={{ textAlign: 'center', fontFamily: 'Georgia' }}>
                                         <h2 >Technology</h2>
+                                        <br></br>
                                         <p>The Technology Stacks I have worked with</p>
-
+                                        <br></br>
                                         {/* The four tech cards */}
                                         <Cards></Cards>
 
@@ -371,9 +369,10 @@ const App = (props) => {
                             }
                         }
                     }
-                }} style={{ marginTop: '-700px', height: "400px" }} />
+                }} style={{ marginTop: '-750px', height: "400px" }} />
 
 
+                <footer>2020 Liang J. Li</footer>
 
         </div>
 
