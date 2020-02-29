@@ -29,6 +29,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 //Particles
 import Particles from 'react-particles-js';
 
+
 const App = (props) => {
 
     //Tabs
@@ -82,7 +83,7 @@ const App = (props) => {
             <br></br>
             <br></br>
             <br></br> */}
-            <Image src={bg} fluid style={{ width: '100%', height: '80%', position: "relative", zIndex: "0"}}></Image>
+            <Image src={bg} fluid style={{ width: '100%', height: '80%', position: "relative", zIndex: "0" }}></Image>
 
 
 
@@ -90,7 +91,7 @@ const App = (props) => {
                 params={{
                     "particles": {
                         "number": {
-                            "value": 500
+                            "value": 400
                         },
                         "size": {
                             "value": 3
@@ -104,20 +105,20 @@ const App = (props) => {
                             }
                         }
                     }
-                }}  style={{ marginTop: '-800px', zIndex: 999}}/>
+                }} style={{ marginTop: '-800px', zIndex: 999 }} />
 
+            {/* <br></br>
             <br></br>
             <br></br>
-            <br></br>
-            <br></br>
+            <br></br> */}
 
-            <div className='ui container' style={{marginTop:'-10px', backgroundImage:'linear-gradient(0.35turn, #ffccff, #ebf8e1, #ccccff)', borderRadius:"8px"}}>
+            <div className='ui container' style={{ marginTop: '-10px', backgroundImage: 'linear-gradient(0.35turn, #ffccff, #ebf8e1, #ccccff)', borderRadius: "8px", zIndex: "1" }}>
                 <Nav tabs style={{ cursor: 'pointer' }}>
                     <NavItem>
                         <NavLink
                             className={classnames({ active: activeTab === '1' })}
                             onClick={() => { toggle('1'); }}>
-                            <h2 style={{ fontFamily: 'Pacifico'}}>About me</h2>
+                            <h2 style={{ fontFamily: 'Pacifico' }}>About me</h2>
                         </NavLink>
                     </NavItem>
                     <NavItem>
@@ -233,20 +234,6 @@ const App = (props) => {
 
                                 {/* TODO: Add Project tab */}
 
-
-                                <div className='col'>
-                                    <Card style={{ width: '18rem' }}>
-                                        <CardImg variant='top' src={bg}></CardImg>
-                                        <CardBody></CardBody>
-                                    </Card>
-
-                                    <br></br>
-
-                                    <Card style={{ width: '18rem' }}>
-                                        <CardImg variant='top' src={bg}></CardImg>
-                                        <CardBody></CardBody>
-                                    </Card>
-                                </div>
                             </Col>
 
                             <Col sm="6">
@@ -271,7 +258,30 @@ const App = (props) => {
                                     <Button>Go somewhere</Button>
                                 </Card>
 
+                                <hr
+                                    style={{
+                                        color: 'blue',
+                                        height: 1
+
+                                    }}
+                                />
+                                
+
+                                <CardsSlide
+                                    imagePath={visualization}
+                                    title={"Myriad Streaming App"}
+                                    content={<CardModal modalTitle="Streaming App" buttonLabel="See Demo"></CardModal>}
+                                ></CardsSlide>
+
                                 {/* TODO: Add Project tab */}
+
+                                <hr
+                                    style={{
+                                        color: 'blue',
+                                        height: 1
+
+                                    }}
+                                />
 
 
                                 <div className='col'>
@@ -339,11 +349,29 @@ const App = (props) => {
 
 
 
+            {/* <br></br>
             <br></br>
-            <br></br>
-            <br></br>
+            <br></br> */}
 
-
+            <Particles
+                params={{
+                    "particles": {
+                        "number": {
+                            "value": 250
+                        },
+                        "size": {
+                            "value": 3
+                        }
+                    },
+                    "interactivity": {
+                        "events": {
+                            "onhover": {
+                                "enable": true,
+                                "mode": "repulse"
+                            }
+                        }
+                    }
+                }} style={{ marginTop: '-700px', height: "400px" }} />
 
 
 
