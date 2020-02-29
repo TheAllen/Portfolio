@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import CardSlide from './CardsSlide';
+import TechCard from './TechCard';
 
 import frontend from '../images/frontend.png';
 import backend from '../images/backend.png';
@@ -57,16 +57,16 @@ class Cards extends Component {
 
 
                     <div className="col-md-3">
-                        <CardSlide imagePath={frontend} text={frontEndText}></CardSlide>
+                        <TechCard imagePath={frontend} text={frontEndText}></TechCard>
                     </div>
                     <div className="col-md-3">
-                        <CardSlide imagePath={backend} text={backEndText}></CardSlide>
+                        <TechCard imagePath={backend} text={backEndText}></TechCard>
                     </div>
                     <div className="col-md-3">
-                        <CardSlide imagePath={database} text={databaseText}></CardSlide>
+                        <TechCard imagePath={database} text={databaseText}></TechCard>
                     </div>
                     <div className="col-md-3">
-                        <CardSlide imagePath={deployment} text={deploymentText}></CardSlide>
+                        <TechCard imagePath={deployment} text={deploymentText}></TechCard>
                     </div>
 
                 </div>

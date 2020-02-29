@@ -1,12 +1,11 @@
 import React from 'react';
-import "./card-style.css";
+import './card-style.css';
 
-const CardsSlide = (props) => {
-
+const TechCard = (props) => {
     return (
-        <div className="card text-center" style={{fontFamily:"pacifico", borderRadius:"5px"}}>
+        <div className="card text-center" style={{fontFamily:"pacifico"}}>
             <div className="overflow">
-                <img src={props.imagePath} alt="Card Image" className="card-img-top"></img>
+                <img src={props.imagePath} alt="Card Image" className="card-img-top" style={{height:"150px"}}></img>
             </div>
             <div className="card-body text-dark">
                 <h4 className="card-title" style={{textDecorationLine: 'underline'}}>{props.title}</h4>
@@ -20,4 +19,4 @@ const CardsSlide = (props) => {
     );
 };
 
-export default CardsSlide;
+export default TechCard;
