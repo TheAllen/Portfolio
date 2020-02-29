@@ -1,6 +1,6 @@
 import React, { Component, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Image } from 'react-bootstrap';
+import { Image, Overlay } from 'react-bootstrap';
 import {
     Navbar, NavbarBrand, Nav, NavItem, NavLink,
     Card, Button, CardBody, CardImg, Row, Col, TabPane,
@@ -26,6 +26,9 @@ import visualization from './images/Lyon.png'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+//Particles
+import Particles from 'react-particles-js';
+
 const App = (props) => {
 
     //Tabs
@@ -41,7 +44,8 @@ const App = (props) => {
 
     return (
         // 0.35turn
-        <div className="Container" style={{ backgroundImage: 'linear-gradient(0.35turn, #ffccff, #ebf8e1, #ccccff)' }}>
+        //'linear-gradient(0.35turn, #ffccff, #ebf8e1, #ccccff)'
+        <div className="Container" style={{ backgroundImage: 'linear-gradient(0.35turn, #e66465, #9198e5, #ebf8e1)', scrollBehavior: "smooth" }}>
 
             <Navbar color="dark" light>
                 <NavbarBrand href="/" className="mr-auto"><div style={{ fontFamily: 'Pacifico', color: '#80d4ff' }}>
@@ -66,7 +70,7 @@ const App = (props) => {
                     <DropdownMenu >
                         <DropdownItem href="https://github.com/TheAllen">Github</DropdownItem>
                         <DropdownItem divider></DropdownItem>
-                        <DropdownItem>Contact me</DropdownItem>
+                        <DropdownItem>Resume</DropdownItem>
                     </DropdownMenu>
                 </ButtonDropdown>
 
@@ -74,20 +78,46 @@ const App = (props) => {
             </Navbar>
 
 
-            <Image src={bg} fluid style={{ width: '100%', height: '80%', backgroundImage: 'linear-gradient(to right bottom, #e66465, #9198e5)', position: "relative", zIndex: "1" }}></Image>
+            {/* <br></br>
+            <br></br>
+            <br></br>
+            <br></br> */}
+            <Image src={bg} fluid style={{ width: '100%', height: '80%', position: "relative", zIndex: "0"}}></Image>
+
+
+
+            <Particles
+                params={{
+                    "particles": {
+                        "number": {
+                            "value": 500
+                        },
+                        "size": {
+                            "value": 3
+                        }
+                    },
+                    "interactivity": {
+                        "events": {
+                            "onhover": {
+                                "enable": true,
+                                "mode": "repulse"
+                            }
+                        }
+                    }
+                }}  style={{ marginTop: '-800px', zIndex: 999}}/>
 
             <br></br>
             <br></br>
             <br></br>
             <br></br>
 
-            <div className='ui container'>
-                <Nav tabs>
+            <div className='ui container' style={{marginTop:'-10px', backgroundImage:'linear-gradient(0.35turn, #ffccff, #ebf8e1, #ccccff)', borderRadius:"8px"}}>
+                <Nav tabs style={{ cursor: 'pointer' }}>
                     <NavItem>
                         <NavLink
                             className={classnames({ active: activeTab === '1' })}
                             onClick={() => { toggle('1'); }}>
-                            <h2 style={{ fontFamily: 'Pacifico' }}>About me</h2>
+                            <h2 style={{ fontFamily: 'Pacifico'}}>About me</h2>
                         </NavLink>
                     </NavItem>
                     <NavItem>
@@ -151,7 +181,7 @@ const App = (props) => {
                                     title={"City Visualization 3D"}
                                     text={<div>
                                         <p>This app generates beautiful 3D models of famous Cities around the world! Using Esri ArcGIS api tools to create amazing 3D visualizations.</p>
-                                        <br/>
+                                        <br />
                                         <h4>React</h4>
                                         <h4>ArcGIS</h4>
                                         <h4>Java Spring Boot</h4>
