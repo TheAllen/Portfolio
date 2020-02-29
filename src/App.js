@@ -33,7 +33,7 @@ import Particles from 'react-particles-js';
 const App = (props) => {
 
     //Tabs
-    const [activeTab, setActiveTab] = useState('2');
+    const [activeTab, setActiveTab] = useState('3');
     const toggle = tab => {
         if (activeTab !== tab) setActiveTab(tab);
     }
@@ -84,7 +84,7 @@ const App = (props) => {
             <br></br>
             <br></br> */}
             {/* <div fluid style={{backgroundImage:{bg}, width: '100%'}}></div> */}
-            <Image src={bg} fluid style={{ width: '100%', height: '80%', position: "relative", zIndex: "0" , opacity:"0.80"}}></Image>
+            <Image src={bg} fluid style={{ width: '100%', height: '80%', position: "relative", zIndex: "0", opacity: "0.80" }}></Image>
 
 
 
@@ -109,7 +109,7 @@ const App = (props) => {
                 }} style={{ marginTop: '-800px', zIndex: 999 }} />
 
 
-            <div className="ui container" style={{ marginTop:'10px', backgroundImage: 'linear-gradient(0.35turn, #ffccff, #ebf8e1, #ccccff)', borderRadius: "8px", zIndex: "1" , width:'100%'}}>
+            <div className="ui container" style={{ marginTop: '10px', backgroundImage: 'linear-gradient(0.35turn, #ffccff, #ebf8e1, #ccccff)', borderRadius: "8px", zIndex: "1", width: '100%' }}>
                 <Nav tabs style={{ cursor: 'pointer' }}>
                     <NavItem>
                         <NavLink
@@ -263,7 +263,7 @@ const App = (props) => {
 
                                     }}
                                 />
-                                
+
 
                                 <CardsSlide
                                     imagePath={visualization}
@@ -304,40 +304,90 @@ const App = (props) => {
                         <div>
                             <Row>
 
-                                <Col sm="6">
-                                    <Card body>
-                                        <CardTitle>Special Title Treatment</CardTitle>
-                                        <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
-                                        <Button>Go somewhere</Button>
-                                    </Card>
 
-                                    {/* TODO: Add Project tab */}
-
-
-                                </Col>
                                 <Col sm='6'>
 
                                     <SlideShow ></SlideShow>
                                 </Col>
 
+                                <hr
+                                    style={{
+                                        color: 'blue',
+                                        height: 1
 
-                                <Col sm='6'>
-                                    <Card style={{ width: '25rem' }}>
+                                    }}
+                                />
+
+                                <Col sm='5' style={{alignSelf:'center'}}>
+                                    <Card style={{ width: '30rem' }}>
                                         <CardImg variant='top' src={pic1}></CardImg>
                                         <CardBody style={{ textAlign: 'center', fontFamily: 'Pacifico' }}>Victoria Harbor at dawn</CardBody>
                                     </Card>
                                 </Col>
+
+                                <hr
+                                    style={{
+                                        color: 'blue',
+                                        height: 1
+
+                                    }}
+                                />
                                 {/* Line break */}
                                 <br></br>
-                                <Col sm='6'>
-                                    <Card style={{ width: '25rem' }}>
+                                <Col sm='6' style={{alignSelf:'center'}}>
+                                    <Card style={{ width: '30rem' }}>
                                         <CardImg variant='top' src={pic2}></CardImg>
                                         <CardBody style={{ textAlign: 'center', fontFamily: 'Pacifico' }}>Looking down on top of Tokyo</CardBody>
                                     </Card>
 
                                 </Col>
 
+                                <Col sm='6'>
+
+                                    <SlideShow ></SlideShow>
+                                </Col>
+
                             </Row>
+
+                            <hr
+                                    style={{
+                                        color: 'blue',
+                                        height: 1
+
+                                    }}
+                                />
+
+
+
+                            <Row>
+                                <Col sm='4'>
+                                    <Card style={{ width: '22rem' }}>
+                                        <CardImg variant='top' src={pic1}></CardImg>
+                                        <CardBody style={{ textAlign: 'center', fontFamily: 'Pacifico' }}>Victoria Harbor at dawn</CardBody>
+                                    </Card>
+                                </Col>
+                                <Col sm='4'>
+                                    <Card style={{ width: '22rem' }}>
+                                        <CardImg variant='top' src={pic1}></CardImg>
+                                        <CardBody style={{ textAlign: 'center', fontFamily: 'Pacifico' }}>Victoria Harbor at dawn</CardBody>
+                                    </Card>
+                                </Col>
+                                <Col sm='4'>
+                                    <Card style={{ width: '22rem' }}>
+                                        <CardImg variant='top' src={pic1}></CardImg>
+                                        <CardBody style={{ textAlign: 'center', fontFamily: 'Pacifico' }}>Victoria Harbor at dawn</CardBody>
+                                    </Card>
+                                </Col>
+
+                            </Row>
+
+                            <hr
+                                    style={{
+                                        color: 'blue',
+                                        height: 1
+
+                                    }}
+                                />
 
                         </div>
 
@@ -372,7 +422,7 @@ const App = (props) => {
                 }} style={{ marginTop: '-750px', height: "400px" }} />
 
 
-                <footer>2020 Liang J. Li</footer>
+            <footer>2020 Liang J. Li</footer>
 
         </div>
 
