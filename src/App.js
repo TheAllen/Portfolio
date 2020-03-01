@@ -9,23 +9,18 @@ import {
 } from 'reactstrap';
 import classnames from 'classnames';
 
+// Components
 import CardModal from './components/CardModal';
 import SlideShow from './components/SlideShow';
 import CardsSlide from './components/CardsSlide';
 import Cards from './components/Cards';
 import TechCard from './components/TechCard';
+import AboutMe from './components/AboutMe';
 
 import bg from './images/nyc.jpg'
 import pic1 from './images/victoria.jpg'
 import pic2 from './images/tokyo.jpg'
 import logo from './images/logo.jpg'
-import frontend from './images/frontend.png'
-import java from './images/java.jpg';
-import node from './images/node.png';
-import react from './images/react.png';
-import spring from './images/spring.png';
-import cpp from './images/cpp.png';
-import javascript from './images/js.png';
 
 import sylvanas from './images/sylvanas.png';
 import visualization from './images/Lyon.png'
@@ -154,77 +149,8 @@ const App = (props) => {
                 </Nav>
                 <TabContent activeTab={activeTab}>
                     <TabPane tabId="1">
-                        <Row>
-                            <Col sm="12">
-
-                                {/* Tab 1 Content */}
-                                {/* TODO: Refactor this to another component */}
-                                <div className='row' style={{ width: '100%' }}>
-                                    <div className='col' style={{ textAlign: 'center', fontFamily: 'Georgia' }}>
-
-                                        {/* About me */}
-                                        <h2>About</h2>
-                                        <p></p>
-
-                                        <hr
-                                            style={{
-                                                color: 'blue',
-                                                height: 1
-
-                                            }}
-                                        />
-
-                                        <h2 >Technology</h2>
-                                        <br></br>
-                                        <p>The Technology Stacks I have worked with</p>
-                                        <br></br>
-                                        {/* The four tech cards */}
-                                        <Cards></Cards>
-
-                                        <br></br>
-                                        <br></br>
-                                        
-
-                                        <hr
-                                            style={{
-                                                color: 'blue',
-                                                height: 1
-
-                                            }}
-                                        />
-
-
-                                        <br></br>
-                                        <Row>
-                                            <Col xs={6} md={2}>
-                                                <Image className="icon" src={java} style={{ height: "50%" , marginLeft:"25px"}} roundedCircle />
-                                            </Col>
-                                            <Col xs={6} md={2}>
-                                                <Image className="icon" src={spring} style={{ height: "50%" }} roundedCircle />
-                                            </Col>
-                                            <Col xs={6} md={2}>
-                                                <Image className="icon" src={javascript} style={{ height: "50%" }} rounded />
-                                            </Col>
-                                            <Col xs={6} md={2}>
-                                                <Image className="icon" src={node} style={{ height: "50%" }} roundedCircle />
-                                            </Col>
-                                            <Col xs={6} md={2}>
-                                                <Image className="icon" src={react} style={{ height: "50%" }} roundedCircle />
-                                            </Col>
-                                            <Col xs={6} md={2}>
-                                                <Image className="icon" src={cpp} style={{ height: "50%" }} rounded />
-                                            </Col>
-                                        </Row>
-
-                                
-
-
-                                    </div>
-
-                                </div>
-
-                            </Col>
-                        </Row>
+                        {/* About me */}
+                        <AboutMe></AboutMe>
                     </TabPane>
                     <TabPane tabId="2">
                         <br></br>
