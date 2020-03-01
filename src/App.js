@@ -58,9 +58,10 @@ const App = (props) => {
                             width="50"
                             height="50"
                             className="d-inline-block align-center"
-                            style={{ borderRadius: "25px" }}
+                            style={{ borderRadius: "25px", marginLeft: '10px' }}
                         />
-                        <h1>Liang Li</h1>
+
+                        <h1 style={{ marginLeft: '10px' }}>Allen Li</h1>
                     </div>
                 </div>
                 </NavbarBrand>
@@ -84,7 +85,7 @@ const App = (props) => {
             <br></br>
             <br></br> */}
             {/* <div fluid style={{backgroundImage:{bg}, width: '100%'}}></div> */}
-            <Image src={bg} fluid style={{ width: '100%', height: '80%', position: "relative", zIndex: "0", opacity: "0.80" }}></Image>
+            <Image src={bg} fluid style={{ width: '100%', height: '100%', position: "relative", zIndex: "0", opacity: "0.80" }}></Image>
 
 
 
@@ -110,9 +111,10 @@ const App = (props) => {
 
 
             <div className="ui container" style={{ marginTop: '10px', backgroundImage: 'linear-gradient(0.35turn, #ffccff, #ebf8e1, #ccccff)', borderRadius: "8px", zIndex: "1", width: '100%' }}>
-                <Nav tabs style={{ cursor: 'pointer' }}>
+                <Nav className='nav nav-fill justify-content-center' tabs style={{ cursor: 'pointer' }}>
                     <NavItem>
                         <NavLink
+
                             className={classnames({ active: activeTab === '1' })}
                             onClick={() => { toggle('1'); }}>
                             <h2 style={{ fontFamily: 'Pacifico' }}>About me</h2>
@@ -128,9 +130,19 @@ const App = (props) => {
 
                     <NavItem>
                         <NavLink
+
                             className={classnames({ active: activeTab === '3' })}
                             onClick={() => { toggle('3') }}>
                             <h2 style={{ fontFamily: 'Pacifico' }}>Travels</h2>
+                        </NavLink>
+                    </NavItem>
+
+                    <NavItem>
+                        <NavLink
+                            className={classnames({ active: activeTab === '4' })}
+                            onClick={() => { toggle('4') }}>
+                            <h2 style={{ fontFamily: 'Pacifico' }}>Contact Me</h2>
+
                         </NavLink>
                     </NavItem>
                 </Nav>
@@ -172,6 +184,7 @@ const App = (props) => {
                         <br></br>
                         <Row>
                             <Col sm="6">
+
                                 {/* Cards for projects */}
 
                                 {/* 3D Visualization Project */}
@@ -180,7 +193,15 @@ const App = (props) => {
                                     title={"City Visualization 3D"}
                                     text={<div>
                                         <p>This app generates beautiful 3D models of famous Cities around the world! Using Esri ArcGIS api tools to create amazing 3D visualizations.</p>
-                                        <br />
+
+                                        <hr
+                                            style={{
+                                                color: 'blue',
+                                                height: 1
+
+                                            }}
+                                        />
+                                        
                                         <h4>React</h4>
                                         <h4>ArcGIS</h4>
                                         <h4>Java Spring Boot</h4>
@@ -301,6 +322,7 @@ const App = (props) => {
 
                     {/* Travels */}
                     <TabPane tabId="3">
+                        <br></br>
                         <div>
                             <Row>
 
@@ -318,7 +340,7 @@ const App = (props) => {
                                     }}
                                 />
 
-                                <Col sm='5' style={{alignSelf:'center'}}>
+                                <Col sm='5' style={{ alignSelf: 'center' }}>
                                     <Card style={{ width: '30rem' }}>
                                         <CardImg variant='top' src={pic1}></CardImg>
                                         <CardBody style={{ textAlign: 'center', fontFamily: 'Pacifico' }}>Victoria Harbor at dawn</CardBody>
@@ -334,7 +356,7 @@ const App = (props) => {
                                 />
                                 {/* Line break */}
                                 <br></br>
-                                <Col sm='6' style={{alignSelf:'center'}}>
+                                <Col sm='6' style={{ alignSelf: 'center' }}>
                                     <Card style={{ width: '30rem' }}>
                                         <CardImg variant='top' src={pic2}></CardImg>
                                         <CardBody style={{ textAlign: 'center', fontFamily: 'Pacifico' }}>Looking down on top of Tokyo</CardBody>
@@ -350,12 +372,12 @@ const App = (props) => {
                             </Row>
 
                             <hr
-                                    style={{
-                                        color: 'blue',
-                                        height: 1
+                                style={{
+                                    color: 'blue',
+                                    height: 1
 
-                                    }}
-                                />
+                                }}
+                            />
 
 
 
@@ -382,15 +404,50 @@ const App = (props) => {
                             </Row>
 
                             <hr
-                                    style={{
-                                        color: 'blue',
-                                        height: 1
+                                style={{
+                                    color: 'blue',
+                                    height: 1
 
-                                    }}
-                                />
+                                }}
+                            />
 
                         </div>
 
+                    </TabPane>
+
+                    <TabPane tabId="4">
+                        <Row>
+                            <Col sm="12">
+
+                                {/* Tab 1 Content */}
+                                {/* TODO: Refactor this to another component */}
+                                <div className='row' style={{ width: '100%' }}>
+                                    <div className='col' style={{ textAlign: 'center', fontFamily: 'Georgia' }}>
+                                        <br></br>
+                                        <h2 >Get In Touch</h2>
+                                        <br></br>
+                                        <p>The Technology Stacks I have worked with</p>
+                                        <br></br>
+                                        {/* The four tech cards */}
+                                        <Cards></Cards>
+
+                                        <Card style={{ width: '18rem' }}>
+                                            <CardImg variant='top' src={bg}></CardImg>
+                                            <CardBody></CardBody>
+                                        </Card>
+
+                                        <br></br>
+
+                                        <Card style={{ width: '18rem' }}>
+                                            <CardImg variant='top' src={bg}></CardImg>
+                                            <CardBody></CardBody>
+                                        </Card>
+                                    </div>
+
+                                </div>
+
+                            </Col>
+                        </Row>
                     </TabPane>
                 </TabContent>
             </div>

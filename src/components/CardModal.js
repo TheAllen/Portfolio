@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import '../components/card-style.css';
 
+import visualDemo from '../vids/visualDemo1.mp4'
+
 const CardModal = (props) => {
     const {
         modalTitle,
@@ -14,18 +16,18 @@ const CardModal = (props) => {
     const [modal, setModal] = useState(false);
 
     const toggle = () => setModal(!modal);
-
+    
     return (
         <div>
             <Button color="primary" onClick={toggle}>{buttonLabel}</Button>
             <Modal isOpen={modal} toggle={toggle} >
                 <ModalHeader toggle={toggle}>{modalTitle}</ModalHeader>
                 <video width="500px" controls>
-                    <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4" type="video/mp4" />
+                    <source src={visualDemo} type="video/mp4" />
                 </video>
                 <p style={{ fontFamily: "Georgia", marginLeft: '20px', marginTop: '15px' }}>{content}</p>
                 <ModalFooter>
-                    <Button color="primary" onClick={toggle}>Source Code</Button>{' '}
+                    <Button color="primary" onClick={toggle} href="https://github.com/TheAllen/Skyscraper3DVisualization">Source Code</Button>{' '}
                     <Button color="secondary" onClick={toggle}>Cancel</Button>
                 </ModalFooter>
             </Modal>
