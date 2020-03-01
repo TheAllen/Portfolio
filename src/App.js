@@ -197,7 +197,7 @@ const App = (props) => {
                                         <br></br>
                                         <Row>
                                             <Col xs={6} md={2}>
-                                                <Image className="icon" src={java} style={{ height: "50%" }} roundedCircle />
+                                                <Image className="icon" src={java} style={{ height: "50%" , marginLeft:"25px"}} roundedCircle />
                                             </Col>
                                             <Col xs={6} md={2}>
                                                 <Image className="icon" src={spring} style={{ height: "50%" }} roundedCircle />
@@ -215,6 +215,8 @@ const App = (props) => {
                                                 <Image className="icon" src={cpp} style={{ height: "50%" }} rounded />
                                             </Col>
                                         </Row>
+
+                                
 
 
                                     </div>
