@@ -20,11 +20,18 @@ import pic1 from './images/victoria.jpg'
 import pic2 from './images/tokyo.jpg'
 import logo from './images/logo.jpg'
 import frontend from './images/frontend.png'
+import java from './images/java.jpg';
+import node from './images/node.png';
+import react from './images/react.png';
+import spring from './images/spring.png';
+import cpp from './images/cpp.png';
+import javascript from './images/js.png';
 
 import sylvanas from './images/sylvanas.png';
 import visualization from './images/Lyon.png'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './components/card-style.css';
 
 //Particles
 import Particles from 'react-particles-js';
@@ -33,7 +40,7 @@ import Particles from 'react-particles-js';
 const App = (props) => {
 
     //Tabs
-    const [activeTab, setActiveTab] = useState('3');
+    const [activeTab, setActiveTab] = useState('1');
     const toggle = tab => {
         if (activeTab !== tab) setActiveTab(tab);
     }
@@ -114,7 +121,6 @@ const App = (props) => {
                 <Nav className='nav nav-fill justify-content-center' tabs style={{ cursor: 'pointer' }}>
                     <NavItem>
                         <NavLink
-
                             className={classnames({ active: activeTab === '1' })}
                             onClick={() => { toggle('1'); }}>
                             <h2 style={{ fontFamily: 'Pacifico' }}>About me</h2>
@@ -155,6 +161,19 @@ const App = (props) => {
                                 {/* TODO: Refactor this to another component */}
                                 <div className='row' style={{ width: '100%' }}>
                                     <div className='col' style={{ textAlign: 'center', fontFamily: 'Georgia' }}>
+
+                                        {/* About me */}
+                                        <h2>About</h2>
+                                        <p></p>
+
+                                        <hr
+                                            style={{
+                                                color: 'blue',
+                                                height: 1
+
+                                            }}
+                                        />
+
                                         <h2 >Technology</h2>
                                         <br></br>
                                         <p>The Technology Stacks I have worked with</p>
@@ -162,17 +181,42 @@ const App = (props) => {
                                         {/* The four tech cards */}
                                         <Cards></Cards>
 
-                                        <Card style={{ width: '18rem' }}>
-                                            <CardImg variant='top' src={bg}></CardImg>
-                                            <CardBody></CardBody>
-                                        </Card>
+                                        <br></br>
+                                        <br></br>
+                                        
+
+                                        <hr
+                                            style={{
+                                                color: 'blue',
+                                                height: 1
+
+                                            }}
+                                        />
+
 
                                         <br></br>
+                                        <Row>
+                                            <Col xs={6} md={2}>
+                                                <Image className="icon" src={java} style={{ height: "50%" }} roundedCircle />
+                                            </Col>
+                                            <Col xs={6} md={2}>
+                                                <Image className="icon" src={spring} style={{ height: "50%" }} roundedCircle />
+                                            </Col>
+                                            <Col xs={6} md={2}>
+                                                <Image className="icon" src={javascript} style={{ height: "50%" }} rounded />
+                                            </Col>
+                                            <Col xs={6} md={2}>
+                                                <Image className="icon" src={node} style={{ height: "50%" }} roundedCircle />
+                                            </Col>
+                                            <Col xs={6} md={2}>
+                                                <Image className="icon" src={react} style={{ height: "50%" }} roundedCircle />
+                                            </Col>
+                                            <Col xs={6} md={2}>
+                                                <Image className="icon" src={cpp} style={{ height: "50%" }} rounded />
+                                            </Col>
+                                        </Row>
 
-                                        <Card style={{ width: '18rem' }}>
-                                            <CardImg variant='top' src={bg}></CardImg>
-                                            <CardBody></CardBody>
-                                        </Card>
+
                                     </div>
 
                                 </div>
@@ -201,7 +245,7 @@ const App = (props) => {
 
                                             }}
                                         />
-                                        
+
                                         <h4>React</h4>
                                         <h4>ArcGIS</h4>
                                         <h4>Java Spring Boot</h4>
