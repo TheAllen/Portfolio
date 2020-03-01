@@ -23,7 +23,7 @@ const AboutMe = (props) => {
 
                         {/* About me */}
                         <h2>About</h2>
-                        <p></p>
+                        <p>Motivated programmer who is always trying to hone my skills and curious about new technology</p>
 
                         <hr
                             style={{
