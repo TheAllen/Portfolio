@@ -23,9 +23,6 @@ import pic1 from './images/victoria.jpg'
 import pic2 from './images/tokyo.jpg'
 import logo from './images/logo.jpg'
 
-import sylvanas from './images/sylvanas.png';
-import visualization from './images/Lyon.png'
-
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './components/card-style.css';
 
