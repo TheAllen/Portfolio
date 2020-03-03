@@ -248,13 +248,7 @@ const App = (props) => {
 
                             </Row>
 
-                            <hr
-                                style={{
-                                    color: 'blue',
-                                    height: 1
-
-                                }}
-                            />
+                            {lineBreak()}
 
                         </div>
 
@@ -325,7 +319,16 @@ const App = (props) => {
                 }} style={{ marginTop: '-750px', height: "400px" }} />
 
 
-            <footer>2020 Liang J. Li</footer>
+            {/* Foot component */}
+            <footer className="page-footer font-small blue">
+
+
+                <div className="footer-copyright text-center py-3">© 2020 Copyright:
+                    <a href="https://mdbootstrap.com/"> Liang J. Li</a>
+                </div>
+
+
+            </footer>
 
         </div>
 
