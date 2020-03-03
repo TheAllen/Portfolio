@@ -163,14 +163,14 @@ const App = (props) => {
                 </Nav>
                 <TabContent activeTab={activeTab}>
 
+                    {/* About me 1 */}
                     <TabPane tabId="1">
-                        {/* About me 1 */}
                         <AboutMe></AboutMe>
                     </TabPane>
 
+                    {/* Projects Tab 2 */}
                     <TabPane tabId="2">
                         <br></br>
-                        {/* Projects Tab 2 */}
                         <ProjectsTab></ProjectsTab>
                     </TabPane>
 
@@ -207,7 +207,7 @@ const App = (props) => {
                                     }}
                                 />
                                 {/* Line break */}
-                                
+
                                 <br></br>
                                 <Col sm='6' style={{ alignSelf: 'center' }}>
                                     <Card style={{ width: '30rem' }}>
@@ -270,7 +270,7 @@ const App = (props) => {
                                     <div className='col' style={{ textAlign: 'center', fontFamily: 'Georgia' }}>
                                         <br></br>
                                         <h2 >Get In Touch</h2>
-                                        
+
                                         <br></br>
                                         <p>The Technology Stacks I have worked with</p>
                                         <br></br>
