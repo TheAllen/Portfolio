@@ -106,20 +106,35 @@ const App = (props) => {
                 params={{
                     "particles": {
                         "number": {
-                            "value": 400
+                            "value": 200,
+                            "density": {
+                                "enable": true,
+                                "value_area": 1000
+                            }
                         },
                         "size": {
                             "value": 3
+                        },
+                        "move": {
+                            "enable": true,
+                            "speed": 6,
+                            "direction": "none",
+                            "random": false,
+                            "straight": false,
+                            "out_mode": "out",
+                            "bounce": false,
+                            "attract": { enable: false, rotateX: 600, rotateY: 1200 }
                         }
                     },
                     "interactivity": {
                         "events": {
                             "onhover": {
                                 "enable": true,
-                                "mode": "repulse"
+                                "mode": "grab"
                             }
                         }
-                    }
+                    },
+                    retina_detect: true
                 }} style={{ marginTop: '-800px', zIndex: 999 }} />
 
 
@@ -167,8 +182,12 @@ const App = (props) => {
 
                     {/* Projects Tab 2 */}
                     <TabPane tabId="2">
-                        <br></br>
-                        <ProjectsTab></ProjectsTab>
+                        <div>
+                            <br></br>
+                            <ProjectsTab></ProjectsTab>
+
+                        </div>
+
                     </TabPane>
 
                     {/* Travels */}
@@ -255,7 +274,7 @@ const App = (props) => {
                         <Row>
                             <Col sm="12">
 
-                                {/* Tab 1 Content */}
+                                {/* Tab 4 Contact me*/}
                                 {/* TODO: Refactor this to another component */}
                                 <div className='row' style={{ width: '100%' }}>
                                     <div className='col' style={{ textAlign: 'center', fontFamily: 'Georgia' }}>
@@ -299,17 +318,25 @@ const App = (props) => {
                 params={{
                     "particles": {
                         "number": {
-                            "value": 250
+                            "value": 200,
+                            "density": {
+                                "enable": true,
+                                "value_area": 1000
+                            }
                         },
                         "size": {
                             "value": 3
                         }
                     },
+                    "opacity": {
+                        "value": 0.7,
+                        "random": true
+                    },
                     "interactivity": {
                         "events": {
                             "onhover": {
                                 "enable": true,
-                                "mode": "repulse"
+                                "mode": "grab"
                             }
                         }
                     }

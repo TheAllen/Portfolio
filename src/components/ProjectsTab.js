@@ -83,6 +83,21 @@ const ProjectTab = (props) => {
                 <CardsSlide
                     imagePath={visualization}
                     title={"Myriad Streaming App"}
+                    text={
+                        <div>
+
+                            <p>This app allows users to watch or create streams</p>
+
+                            {lineBreak()}
+
+                            <h5>React</h5>
+                            <h5>NodeJS | Express</h5>
+                            <h5>RTMP Server</h5>
+                            <h5>Spring Boot WebSocket</h5>
+                            <h5>MongoDB</h5>
+                            <h5>Google OAuth2</h5>
+                        </div>
+                    }
                     content={<CardModal modalTitle="Streaming App" buttonLabel="See Demo"></CardModal>}
                 ></CardsSlide>
 
@@ -100,6 +115,19 @@ const ProjectTab = (props) => {
                 <CardsSlide
                     imagePath={visualization}
                     title={"Myriad Streaming App"}
+                    text={
+                        <div>
+
+                            <p>This app allows users to watch or create streams</p>
+
+                            {lineBreak()}
+
+                            <h4>React</h4>
+                            <h4>ArcGIS</h4>
+                            <h4>Java Spring Boot</h4>
+                            <h5>mySQL</h5>
+                        </div>
+                    }
                     content={<CardModal modalTitle="Streaming App" buttonLabel="See Demo"></CardModal>}
                 ></CardsSlide>
 
@@ -123,6 +151,7 @@ const ProjectTab = (props) => {
                 </div>
             </Col>
         </Row>
+        
     );
 }
 
