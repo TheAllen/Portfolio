@@ -23,6 +23,7 @@ import bg from './images/nyc.jpg'
 import pic1 from './images/victoria.jpg'
 import pic2 from './images/tokyo.jpg'
 import logo from './images/logo.jpg'
+import lucerne from './images/lucerne.jpg';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './components/card-style.css';
@@ -103,39 +104,6 @@ const App = (props) => {
 
 
 
-            <Particles
-                params={{
-                    "particles": {
-                        "number": {
-                            "value": 300
-                            
-                        },
-                        "size": {
-                            "value": 3
-                        },
-                        "move": {
-                            "enable": true,
-                            "speed": 5,
-                            "direction": "none",
-                            "random": false,
-                            "straight": false,
-                            "out_mode": "out",
-                            "bounce": false,
-                            "attract": { enable: false, rotateX: 600, rotateY: 1200 }
-                        }
-                    },
-                    "interactivity": {
-                        "events": {
-                            "onhover": {
-                                "enable": true,
-                                "mode": "grab"
-                            }
-                        }
-                    },
-                    retina_detect: true
-                }} style={{ marginTop: '-800px', zIndex: 999 }} />
-
-
             <div className="ui container" style={{ marginTop: '10px', backgroundImage: 'linear-gradient(0.35turn, #ffccff, #ebf8e1, #ccccff)', borderRadius: "8px", zIndex: "1", width: '100%' }}>
                 <Nav className='nav nav-fill justify-content-center pill' tabs style={{ cursor: 'pointer' }}>
                     <NavItem>
@@ -195,7 +163,7 @@ const App = (props) => {
                             <Row>
                                 <Col sm='6'>
                                     {/* Image slide show */}
-                                    <SlideShow ></SlideShow>
+                                    <SlideShow pic1={lucerne}></SlideShow>
                                 </Col>
 
                                 <hr
@@ -233,7 +201,7 @@ const App = (props) => {
 
                                 <Col sm='6'>
 
-                                    <SlideShow ></SlideShow>
+                                    <SlideShow pic1={lucerne}></SlideShow>
                                 </Col>
 
                             </Row>
@@ -311,7 +279,7 @@ const App = (props) => {
 
 
                 <div className="footer-copyright text-center py-3">© 2020 Copyright:
-                    <a href="https://mdbootstrap.com/"> Liang J. Li</a>
+                    <a href="https://github.com/TheAllen"> Liang J. Li</a>
                 </div>
 
 
