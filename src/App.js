@@ -17,6 +17,7 @@ import Cards from './components/Cards';
 import TechCard from './components/TechCard';
 import AboutMe from './components/AboutMe';
 import ProjectsTab from './components/ProjectsTab';
+import ContactMe from './components/ContactMe';
 
 import bg from './images/nyc.jpg'
 import pic1 from './images/victoria.jpg'
@@ -46,7 +47,7 @@ const lineBreak = () => {
 const App = (props) => {
 
     //Tabs
-    const [activeTab, setActiveTab] = useState('1');
+    const [activeTab, setActiveTab] = useState('4');
     const toggle = tab => {
         if (activeTab !== tab) setActiveTab(tab);
     }
@@ -106,18 +107,15 @@ const App = (props) => {
                 params={{
                     "particles": {
                         "number": {
-                            "value": 200,
-                            "density": {
-                                "enable": true,
-                                "value_area": 1000
-                            }
+                            "value": 300
+                            
                         },
                         "size": {
                             "value": 3
                         },
                         "move": {
                             "enable": true,
-                            "speed": 6,
+                            "speed": 5,
                             "direction": "none",
                             "random": false,
                             "straight": false,
@@ -139,7 +137,7 @@ const App = (props) => {
 
 
             <div className="ui container" style={{ marginTop: '10px', backgroundImage: 'linear-gradient(0.35turn, #ffccff, #ebf8e1, #ccccff)', borderRadius: "8px", zIndex: "1", width: '100%' }}>
-                <Nav className='nav nav-fill justify-content-center' tabs style={{ cursor: 'pointer' }}>
+                <Nav className='nav nav-fill justify-content-center pill' tabs style={{ cursor: 'pointer' }}>
                     <NavItem>
                         <NavLink
                             className={classnames({ active: activeTab === '1' })}
@@ -185,7 +183,7 @@ const App = (props) => {
                         <div>
                             <br></br>
                             <ProjectsTab></ProjectsTab>
-
+                            
                         </div>
 
                     </TabPane>
@@ -271,39 +269,7 @@ const App = (props) => {
                     </TabPane>
 
                     <TabPane tabId="4">
-                        <Row>
-                            <Col sm="12">
-
-                                {/* Tab 4 Contact me*/}
-                                {/* TODO: Refactor this to another component */}
-                                <div className='row' style={{ width: '100%' }}>
-                                    <div className='col' style={{ textAlign: 'center', fontFamily: 'Georgia' }}>
-                                        <br></br>
-                                        <h2 >Get In Touch</h2>
-
-                                        <br></br>
-                                        <p>The Technology Stacks I have worked with</p>
-                                        <br></br>
-                                        {/* The four tech cards */}
-                                        <Cards></Cards>
-
-                                        <Card style={{ width: '18rem' }}>
-                                            <CardImg variant='top' src={bg}></CardImg>
-                                            <CardBody></CardBody>
-                                        </Card>
-
-                                        <br></br>
-
-                                        <Card style={{ width: '18rem' }}>
-                                            <CardImg variant='top' src={bg}></CardImg>
-                                            <CardBody></CardBody>
-                                        </Card>
-                                    </div>
-
-                                </div>
-
-                            </Col>
-                        </Row>
+                        <ContactMe></ContactMe>
                     </TabPane>
                 </TabContent>
             </div>
@@ -314,15 +280,12 @@ const App = (props) => {
             <br></br>
             <br></br> */}
 
-            <Particles
+            {/* <Particles
                 params={{
                     "particles": {
                         "number": {
-                            "value": 200,
-                            "density": {
-                                "enable": true,
-                                "value_area": 1000
-                            }
+                            "value": 300
+                            
                         },
                         "size": {
                             "value": 3
@@ -340,7 +303,7 @@ const App = (props) => {
                             }
                         }
                     }
-                }} style={{ marginTop: '-750px', height: "400px" }} />
+                }} style={{ marginTop: '-750px', height: "400px" }} /> */}
 
 
             {/* Foot component */}

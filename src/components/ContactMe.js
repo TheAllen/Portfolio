@@ -1,19 +1,39 @@
 import React from 'react';
-
+import axios from 'axios';
 import { Row, Col } from 'reactstrap';
-import Cards from '../components/Cards';
+import { Form } from 'react-bootstrap';
 
-const ContactMe = (props) => {
+class ContactMe extends React.Component {
 
-    return (
-        <Row>
-            <Col sm='12'>
-                <div className='row' style={{ width: '100%' }}>
+    constructor(props) {
+        super(props);
 
-                </div>
-            </Col>
-        </Row>
-    );
+        this.state = {
+            name: '',
+            email: '',
+            message: '',
+            disabled: false,
+            emailSent: null
+        }
+    }
+
+    onChange = () => {
+        
+    }
+
+    render() {
+        return (
+            <div>
+                <Form style={{ fontFamily: 'Pacifico' }}>
+                    <h1 >Let's Talk</h1>
+                    <Form.Group>
+                        <Form.Label>Full Name</Form.Label>
+                        <Form.Control id='full-name' value={this.name}></Form.Control>
+                    </Form.Group>
+                </Form>
+            </div>
+        );
+    }
 };
 
 export default ContactMe;
