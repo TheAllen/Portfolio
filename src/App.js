@@ -24,6 +24,18 @@ import pic1 from './images/victoria.jpg'
 import pic2 from './images/tokyo.jpg'
 import logo from './images/logo.jpg'
 import lucerne from './images/lucerne.jpg';
+import paris from './images/paris.jpg';
+import hk from './images/hongkong.jpg';
+import brussels from './images/brussels.JPG';
+import baliRice from './images/baliRice.JPG';
+import paulsPlatz from './images/paulsplatz.JPG';
+import islandTemp from './images/islandTemp.JPG';
+import lucerneHarbor from './images/lucerneharbor.JPG';
+import minsha from './images/desert.JPG';
+import louvre from './images/louvre.JPG';
+import arc from './images/arc.JPG';
+import venice from './images/venice.JPG';
+import tirta from './images/tirtagangga.JPG';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './components/card-style.css';
@@ -48,7 +60,7 @@ const lineBreak = () => {
 const App = (props) => {
 
     //Tabs
-    const [activeTab, setActiveTab] = useState('4');
+    const [activeTab, setActiveTab] = useState('3');
     const toggle = tab => {
         if (activeTab !== tab) setActiveTab(tab);
     }
@@ -56,6 +68,84 @@ const App = (props) => {
     //Navbar button dropdown
     const [dropdownOpen, setOpen] = useState(false);
     const menuToggle = () => setOpen(!dropdownOpen);
+
+    const items1 = [
+        {
+            src: lucerneHarbor,
+            altText: 'Slide 1',
+            caption: 'Lucerne',
+            header: 'Switzerland',
+            key: '1'
+        },
+        {
+            src: lucerne,
+            altText: 'Slide 2',
+            caption: '',
+            header: 'Lucerne',
+            key: '2'
+        },
+        {
+            src: hk,
+            altText: 'Slide 3',
+            caption: 'Central',
+            header: 'Hong Kong',
+            key: '3'
+        },
+        {
+            src: hk,
+            altText: 'Slide 3',
+            caption: 'Central',
+            header: 'Hong Kong',
+            key: '4'
+        },
+        {
+            src: hk,
+            altText: 'Slide 3',
+            caption: 'Central',
+            header: 'Hong Kong',
+            key: '5'
+        }
+
+    ];
+
+    const items2 = [
+        {
+            src: paris,
+            altText: 'Slide 1',
+            caption: 'Pilatus',
+            header: 'Lucerne',
+            key: '1'
+        },
+        {
+            src: louvre,
+            altText: 'Slide 2',
+            caption: 'Louvre Museum',
+            header: 'Paris',
+            key: '2'
+        },
+        {
+            src: arc,
+            altText: 'Slide 3',
+            caption: 'Arc de Triomphe',
+            header: 'Paris',
+            key: '3'
+        },
+        {
+            src: hk,
+            altText: 'Slide 3',
+            caption: 'Central',
+            header: 'Hong Kong',
+            key: '4'
+        },
+        {
+            src: hk,
+            altText: 'Slide 3',
+            caption: 'Central',
+            header: 'Hong Kong',
+            key: '5'
+        }
+
+    ];
 
 
     return (
@@ -151,7 +241,7 @@ const App = (props) => {
                         <div>
                             <br></br>
                             <ProjectsTab></ProjectsTab>
-                            
+
                         </div>
 
                     </TabPane>
@@ -160,39 +250,33 @@ const App = (props) => {
                     <TabPane tabId="3">
                         <br></br>
                         <div>
-                            <Row>
-                                <Col sm='6'>
+                            <br></br>
+                            {lineBreak()}
+                            <br></br>
+                            <Row className='justify-content-md-center'>
+                                <Col xs sm='6'>
                                     {/* Image slide show */}
-                                    <SlideShow pic1={lucerne}></SlideShow>
+                                    <SlideShow items={items1}></SlideShow>
                                 </Col>
 
-                                <hr
-                                    style={{
-                                        color: 'blue',
-                                        height: 1
+                                {lineBreak()}
 
-                                    }}
-                                />
-
-                                <Col sm='5' style={{ alignSelf: 'center' }}>
-                                    <Card style={{ width: '30rem' }}>
-                                        <CardImg variant='top' src={pic1}></CardImg>
-                                        <CardBody style={{ textAlign: 'center', fontFamily: 'Pacifico' }}>Victoria Harbor at dawn</CardBody>
+                                <Col sm='6' style={{ alignSelf: 'center' }}>
+                                    <Card style={{ width: '31rem' }}>
+                                        <CardImg variant='top' src={venice}></CardImg>
+                                        <CardBody style={{ textAlign: 'center', fontFamily: 'Pacifico' }}>Venice, Italy</CardBody>
                                     </Card>
                                 </Col>
+                            </Row>
 
-                                <hr
-                                    style={{
-                                        color: 'blue',
-                                        height: 1
+                            <br></br>
+                            {lineBreak()}
+                            <br></br>
 
-                                    }}
-                                />
-                                {/* Line break */}
+                            <Row>
 
-                                <br></br>
                                 <Col sm='6' style={{ alignSelf: 'center' }}>
-                                    <Card style={{ width: '30rem' }}>
+                                    <Card style={{ width: '31rem' }}>
                                         <CardImg variant='top' src={pic2}></CardImg>
                                         <CardBody style={{ textAlign: 'center', fontFamily: 'Pacifico' }}>Looking down on top of Tokyo</CardBody>
                                     </Card>
@@ -201,7 +285,7 @@ const App = (props) => {
 
                                 <Col sm='6'>
 
-                                    <SlideShow pic1={lucerne}></SlideShow>
+                                    <SlideShow items={items2}></SlideShow>
                                 </Col>
 
                             </Row>
@@ -211,14 +295,14 @@ const App = (props) => {
                             <Row>
                                 <Col sm='4'>
                                     <Card style={{ width: '22rem' }}>
-                                        <CardImg variant='top' src={pic1}></CardImg>
-                                        <CardBody style={{ textAlign: 'center', fontFamily: 'Pacifico' }}>Victoria Harbor at dawn</CardBody>
+                                        <CardImg variant='top' src={paulsPlatz}></CardImg>
+                                        <CardBody style={{ textAlign: 'center', fontFamily: 'Pacifico' }}>Paulsplatz in Frankfurt Germany</CardBody>
                                     </Card>
                                 </Col>
                                 <Col sm='4'>
                                     <Card style={{ width: '22rem' }}>
-                                        <CardImg variant='top' src={pic1}></CardImg>
-                                        <CardBody style={{ textAlign: 'center', fontFamily: 'Pacifico' }}>Victoria Harbor at dawn</CardBody>
+                                        <CardImg variant='top' src={islandTemp}></CardImg>
+                                        <CardBody style={{ textAlign: 'center', fontFamily: 'Pacifico' }}>Tanah Lot in West Bali</CardBody>
                                     </Card>
                                 </Col>
                                 <Col sm='4'>
@@ -231,6 +315,67 @@ const App = (props) => {
                             </Row>
 
                             {lineBreak()}
+
+                            <Row className="justify-content-md-center" style={{alignItems:'center'}}>
+                                <Col xs md='auto' style={{ alignSelf: 'center' }}>
+                                    <Card style={{ width: '33rem' }}>
+                                        <CardImg variant='top' src={baliRice}></CardImg>
+                                        <CardBody style={{ textAlign: 'center', fontFamily: 'Pacifico' }}>Rice field in Bali</CardBody>
+                                    </Card>
+                                </Col>
+
+                                <Col  md='auto' style={{ alignSelf: 'center' }}>
+                                    <Card style={{ width: '33rem' }}>
+                                        <CardImg variant='top' src={tirta}></CardImg>
+                                        <CardBody style={{ textAlign: 'center', fontFamily: 'Pacifico' }}>Tirta Gangga in Bali</CardBody>
+                                    </Card>
+                                </Col>
+                            </Row>
+
+                            {lineBreak()}
+
+                            <Row>
+                                <Col sm='4'>
+                                    <Card style={{ width: '22rem' }}>
+                                        <CardImg variant='top' src={paulsPlatz}></CardImg>
+                                        <CardBody style={{ textAlign: 'center', fontFamily: 'Pacifico' }}>Paulsplatz in Frankfurt Germany</CardBody>
+                                    </Card>
+                                </Col>
+                                <Col sm='4'>
+                                    <Card style={{ width: '22rem' }}>
+                                        <CardImg variant='top' src={islandTemp}></CardImg>
+                                        <CardBody style={{ textAlign: 'center', fontFamily: 'Pacifico' }}>Tanah Lot in West Bali</CardBody>
+                                    </Card>
+                                </Col>
+                                <Col sm='4'>
+                                    <Card style={{ width: '22rem' }}>
+                                        <CardImg variant='top' src={pic1}></CardImg>
+                                        <CardBody style={{ textAlign: 'center', fontFamily: 'Pacifico' }}>Victoria Harbor at dawn</CardBody>
+                                    </Card>
+                                </Col>
+
+                            </Row>
+
+                            {lineBreak()}
+
+                            <Row className="justify-content-md-center" style={{alignItems:'center'}}>
+                                <Col xs md='auto' style={{ alignSelf: 'center' }}>
+                                    <Card style={{ width: '33rem' }}>
+                                        <CardImg variant='top' src={minsha}></CardImg>
+                                        <CardBody style={{ textAlign: 'center', fontFamily: 'Pacifico' }}>Minsha desert, China</CardBody>
+                                    </Card>
+                                </Col>
+
+                                <Col  md='auto' style={{ alignSelf: 'center' }}>
+                                    <Card style={{ width: '33rem' }}>
+                                        <CardImg variant='top' src={brussels}></CardImg>
+                                        <CardBody style={{ textAlign: 'center', fontFamily: 'Pacifico' }}>Galeries Royales Saint-Hubert</CardBody>
+                                    </Card>
+                                </Col>
+                            </Row>
+
+                            <br></br>
+                            <br></br>
 
                         </div>
 
