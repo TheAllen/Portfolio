@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import { Row, Col } from 'reactstrap';
 import { Form, Button} from 'react-bootstrap';
+import './contactme.css';
 
 class ContactMe extends React.Component {
 
@@ -30,8 +31,14 @@ class ContactMe extends React.Component {
 
     onSubmit = (e) => {
         e.preventDefault();
+
+        this.setState({
+            disabled: true,
+            emailSent: true
+        });
     }
 
+ 
     render() {
         return (
             <div>
@@ -60,11 +67,12 @@ class ContactMe extends React.Component {
 
                     <Button className="d-inline-block" type="submit" disabled={this.state.disabled}> Send </Button>
 
-                    <br></br>
-                    <br></br>
-
+                 
                     {this.state.emailSent === true && <p className="d-inline success-msg">Email Sent</p>}
                     {this.state.emailSent === false && <p className="d-inline err-msg">Email Not Sent</p>}
+
+                    <br></br>
+                    <br></br>
                 </Form>
             </div>
         );

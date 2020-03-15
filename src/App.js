@@ -68,7 +68,7 @@ const lineBreak = () => {
 const App = (props) => {
 
     //Tabs
-    const [activeTab, setActiveTab] = useState('3');
+    const [activeTab, setActiveTab] = useState('2');
     const toggle = tab => {
         if (activeTab !== tab) setActiveTab(tab);
     }

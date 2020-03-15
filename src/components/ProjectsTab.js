@@ -6,6 +6,12 @@ import CardModal from './CardModal';
 import bg from '../images/nyc.jpg';
 import visualization from '../images/Lyon.png';
 import sylvanas from '../images/sylvanas.png';
+import taskmanager from '../images/taskmanager.png';
+import MyriadPic from '../images/MyriadPic.png';
+
+import visualDemo from '../vids/visualDemo1.mp4';
+import sylvanasDemo from '../vids/sylvanasVid.mp4';
+import myriadVid from '../vids/streamApp.mp4';
 
 
 const ProjectTab = (props) => {
@@ -44,7 +50,7 @@ const ProjectTab = (props) => {
 
 
                     </div>}
-                    content={<CardModal modalTitle="City Visualization 3D" buttonLabel="See Demo" content="Built using Leaflet and Esri ArcGIS api"></CardModal>}
+                    content={<CardModal modalTitle="City Visualization 3D" buttonLabel="See Demo" path = 'https://github.com/TheAllen/Skyscraper3DVisualization' content="Built using Leaflet and Esri ArcGIS api" video={visualDemo}></CardModal>}
                 ></CardsSlide>
 
                 {lineBreak()}
@@ -61,7 +67,7 @@ const ProjectTab = (props) => {
                             <h5>OpenGL</h5>
                         </div>
                     }
-                    content={<CardModal modalTitle="3D Model Loader" buttonLabel="See Demo" content="The objective of this project was to learn about advanced camera concepts and loading large OBJ models to a scene. Learned a lot about how to work with OpenGL."
+                    content={<CardModal modalTitle="3D Model Loader" buttonLabel="See Demo" video = {sylvanasDemo} path = 'https://github.com/TheAllen/3DModelLoader' content="The objective of this project was to learn about advanced camera concepts and loading large OBJ models to a scene. Learned a lot about how to work with OpenGL."
                     ></CardModal>}
                 ></CardsSlide>
 
@@ -81,12 +87,12 @@ const ProjectTab = (props) => {
             <Col sm="6">
 
                 <CardsSlide
-                    imagePath={visualization}
+                    imagePath={MyriadPic}
                     title={"Myriad Streaming App"}
                     text={
                         <div>
 
-                            <p>This app allows users to watch or create streams</p>
+                            <p>This app allows users to stream with OBS and share their contents</p>
 
                             {lineBreak()}
 
@@ -98,32 +104,24 @@ const ProjectTab = (props) => {
                             <h5>Google OAuth2</h5>
                         </div>
                     }
-                    content={<CardModal modalTitle="Streaming App" buttonLabel="See Demo"></CardModal>}
+                    content={<CardModal modalTitle="Streaming App" buttonLabel="See Demo"  video={myriadVid} path='https://github.com/TheAllen'></CardModal>}
                 ></CardsSlide>
 
                 {lineBreak()}
 
-                <Card body>
-                    <CardTitle>Special Title Treatment</CardTitle>
-                    <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
-                    <Button>Go somewhere</Button>
-                </Card>
-
-                {lineBreak()}
 
 
                 <CardsSlide
-                    imagePath={visualization}
+                    imagePath={taskmanager}
                     title={"Myriad Streaming App"}
                     text={
                         <div>
 
-                            <p>This app allows users to watch or create streams</p>
+                            <p>A task management app with a Kanban board</p>
 
                             {lineBreak()}
 
-                            <h4>React</h4>
-                            <h4>ArcGIS</h4>
+                            <h4>React | Redux</h4>
                             <h4>Java Spring Boot</h4>
                             <h5>mySQL</h5>
                         </div>
