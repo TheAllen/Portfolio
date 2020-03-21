@@ -8,6 +8,7 @@ import visualization from '../images/Lyon.png';
 import sylvanas from '../images/sylvanas.png';
 import taskmanager from '../images/taskmanager.png';
 import MyriadPic from '../images/MyriadPic.png';
+import covidTracker from '../images/covidtracker.png';
 
 import visualDemo from '../vids/visualDemo1.mp4';
 import sylvanasDemo from '../vids/sylvanasVid.mp4';
@@ -45,12 +46,31 @@ const ProjectTab = (props) => {
 
                         <h4>React</h4>
                         <h4>ArcGIS</h4>
-                        <h4>Java Spring Boot</h4>
+                        <h4>Java | Spring Boot</h4>
                         <h5>mySQL</h5>
 
 
                     </div>}
                     content={<CardModal modalTitle="City Visualization 3D" buttonLabel="See Demo" path = 'https://github.com/TheAllen/Skyscraper3DVisualization' content="Built using Leaflet and Esri ArcGIS api" video={visualDemo}></CardModal>}
+                ></CardsSlide>
+
+                {lineBreak()}
+
+                <CardsSlide
+                    imagePath={covidTracker}
+                    title={"Covid-19 Tracker"}
+                    text={
+                        <div>
+                            <p>This web app scrapes the JHU CSSE Covid19 data and show the cases onto a map</p>
+                            {lineBreak()}
+                            <h5>Java | Spring Boot</h5>
+                            <h5>React</h5>
+                            <h5>Leaflet</h5>
+                            <h5>JHU CSSE</h5>
+                        </div>
+                    }
+                    content={<CardModal modalTitle="Covid-19 Tracker" buttonLabel="See Demo" video = {sylvanasDemo} path = 'https://tracking-corona-client.herokuapp.com/' content="The objective of this project was to learn about advanced camera concepts and loading large OBJ models to a scene. Learned a lot about how to work with OpenGL."
+                    ></CardModal>}
                 ></CardsSlide>
 
                 {lineBreak()}
