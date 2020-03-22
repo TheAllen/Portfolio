@@ -51,7 +51,7 @@ const ProjectTab = (props) => {
 
 
                     </div>}
-                    content={<CardModal modalTitle="City Visualization 3D" buttonLabel="See Demo" path = 'https://github.com/TheAllen/Skyscraper3DVisualization' content="Built using Leaflet and Esri ArcGIS api" video={visualDemo}></CardModal>}
+                    content={<CardModal modalTitle="City Visualization 3D" buttonLabel="See Demo" path = 'https://github.com/TheAllen/Skyscraper3DVisualization' content="The app contains a map view of the world. Once the user click into a marker of a city, they are able enjoy a nice 3D view of a city." video={visualDemo}></CardModal>}
                 ></CardsSlide>
 
                 {lineBreak()}
@@ -61,7 +61,7 @@ const ProjectTab = (props) => {
                     title={"Covid-19 Tracker"}
                     text={
                         <div>
-                            <p>This web app scrapes the JHU CSSE Covid19 data and show the cases onto a map</p>
+                            <p>This web app scrapes the JHU CSSE Covid19 data and show the Covid19 cases onto a map. The purpose of this app is to bring awareness of number of confirmed cases in the region a user is living in.</p>
                             {lineBreak()}
                             <h5>Java | Spring Boot</h5>
                             <h5>React</h5>
@@ -69,7 +69,7 @@ const ProjectTab = (props) => {
                             <h5>JHU CSSE</h5>
                         </div>
                     }
-                    content={<CardModal modalTitle="Covid-19 Tracker" buttonLabel="See Demo" video = {sylvanasDemo} path = 'https://tracking-corona-client.herokuapp.com/' content="The objective of this project was to learn about advanced camera concepts and loading large OBJ models to a scene. Learned a lot about how to work with OpenGL."
+                    content={<CardModal modalTitle="Covid-19 Tracker" buttonLabel="See Demo" path = 'https://tracking-corona-client.herokuapp.com/' content="The objective of this project was to learn about advanced camera concepts and loading large OBJ models to a scene. Learned a lot about how to work with OpenGL."
                     ></CardModal>}
                 ></CardsSlide>
 
@@ -91,14 +91,7 @@ const ProjectTab = (props) => {
                     ></CardModal>}
                 ></CardsSlide>
 
-                {lineBreak()}
-
-                {/* All Projects --> Github */}
-                <Card body style={{ fontFamily: 'Pacifico', borderRadius: '7px', textAlign: 'center' }}>
-                    <CardTitle ><h3>All Projects</h3></CardTitle>
-                    <CardText>This is my Github containing all my other Projects</CardText>
-                    <Button color='primary' href='https://github.com/TheAllen'>Check out Projects</Button>
-                </Card>
+                
 
                 {/* TODO: Add Project tab */}
 
@@ -112,7 +105,7 @@ const ProjectTab = (props) => {
                     text={
                         <div>
 
-                            <p>This app allows users to stream with OBS and share their contents</p>
+                            <p>This app allows users to stream with OBS and share their contents. Users can create a account with Google and use the app right away</p>
 
                             {lineBreak()}
 
@@ -153,20 +146,12 @@ const ProjectTab = (props) => {
 
                 {lineBreak()}
 
-
-                <div className='col'>
-                    <Card style={{ width: '18rem' }}>
-                        <CardImg variant='top' src={bg}></CardImg>
-                        <CardBody></CardBody>
-                    </Card>
-
-                    <br></br>
-
-                    <Card style={{ width: '18rem' }}>
-                        <CardImg variant='top' src={bg}></CardImg>
-                        <CardBody></CardBody>
-                    </Card>
-                </div>
+                {/* All Projects --> Github */}
+                <Card body style={{ fontFamily: 'Pacifico', borderRadius: '7px', textAlign: 'center' }}>
+                    <CardTitle ><h3>All Projects</h3></CardTitle>
+                    <CardText>My Github containing all my other Projects</CardText>
+                    <Button color='primary' href='https://github.com/TheAllen'>Check out Projects</Button>
+                </Card>
             </Col>
         </Row>
         

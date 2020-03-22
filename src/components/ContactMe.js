@@ -45,6 +45,7 @@ class ContactMe extends React.Component {
                 <Form style={{ fontFamily: 'Pacifico' }} onSubmit={this.onSubmit} >
                     <h1 style={{ marginTop: "40px" }}>Let's Chat</h1>
                     <br></br>
+                    <h4>Email is one of the best way to contact me</h4>
                     <h5>Email: Liangli0408@gmail.com</h5>
                     <br></br>
                     <hr
@@ -55,7 +56,7 @@ class ContactMe extends React.Component {
                         }}
                     />
 
-                    <h1>Send a message</h1>
+                    <h1>Shoot a message</h1>
                     <br></br>
 
                     <Form.Group style={{ fontSize: 18 }} >
