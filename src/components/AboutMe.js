@@ -23,11 +23,15 @@ const AboutMe = (props) => {
 
                         {/* About me */}
                         <h2>About</h2>
+                        <br></br>
                         <p>
                             Hello, my name is Allen.
-                            I'm a Motivated programmer who is eager to learn new technologies. Always looking to improve my skills
+                            I'm a Motivated engineer who enjoys building products. {<br></br>} I'm comfortable with fullstack,
+                            I'm more interested in building scalable backend services. {<br></br>}
+                            I'm looking for a role to work collaboratively in a team to solve problems. 
                             
                         </p>
+                        <br></br>
 
                         <hr
                             style={{

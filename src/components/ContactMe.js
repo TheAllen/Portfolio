@@ -32,9 +32,32 @@ class ContactMe extends React.Component {
     onSubmit = (e) => {
         e.preventDefault();
 
+
         this.setState({
-            disabled: true,
-            emailSent: true
+            disabled: true
+        });
+
+        axios.post('http://localhost:8000/api/email', this.state)
+        .then(res => {
+            if(res.data.success) {
+                this.setState({
+                    disabled: false,
+                    emailSent: true
+                });
+            }else {
+                this.setState({
+                    disabled: false,
+                    emailSent: false
+    
+                });
+            }
+        })
+        .catch(err => {
+            this.setState({
+                disabled: false,
+                emailSent: false
+
+            });
         });
     }
 
