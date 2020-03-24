@@ -139,7 +139,7 @@ const ProjectTab = (props) => {
                             <h5>mySQL</h5>
                         </div>
                     }
-                    content={<CardModal modalTitle="Streaming App" buttonLabel="See Demo"></CardModal>}
+                    content={<CardModal modalTitle="Task Manager" buttonLabel="See Demo"></CardModal>}
                 ></CardsSlide>
 
                 {/* TODO: Add Project tab */}
