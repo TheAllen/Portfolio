@@ -208,14 +208,14 @@ const App = (props) => {
                         <NavLink
                             className={classnames({ active: activeTab === '1' })}
                             onClick={() => { toggle('1'); }}>
-                            <h2 style={{ fontFamily: 'Pacifico' }}>About me</h2>
+                            <h4 style={{ fontFamily: 'Pacifico' }}>About me</h4>
                         </NavLink>
                     </NavItem>
                     <NavItem>
                         <NavLink
                             className={classnames({ active: activeTab === '2' })}
                             onClick={() => { toggle('2'); }}>
-                            <h2 style={{ fontFamily: 'Pacifico' }}>Projects</h2>
+                            <h4 style={{ fontFamily: 'Pacifico' }}>Projects</h4>
                         </NavLink>
                     </NavItem>
 
@@ -224,7 +224,7 @@ const App = (props) => {
 
                             className={classnames({ active: activeTab === '3' })}
                             onClick={() => { toggle('3') }}>
-                            <h2 style={{ fontFamily: 'Pacifico' }}>Travels</h2>
+                            <h4 style={{ fontFamily: 'Pacifico' }}>Travels</h4>
                         </NavLink>
                     </NavItem>
 
@@ -232,7 +232,7 @@ const App = (props) => {
                         <NavLink
                             className={classnames({ active: activeTab === '4' })}
                             onClick={() => { toggle('4') }}>
-                            <h2 style={{ fontFamily: 'Pacifico' }}>Contact Me</h2>
+                            <h4 style={{ fontFamily: 'Pacifico' }}>Contact Me</h4>
 
                         </NavLink>
                     </NavItem>

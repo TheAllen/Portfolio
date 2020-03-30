@@ -36,8 +36,9 @@ class ContactMe extends React.Component {
         this.setState({
             disabled: true
         });
-
-        axios.post('http://localhost:8000/api/email', this.state)
+        const oldUrl = 'http://localhost:8000/api/email';
+        const url = 'http://allenli-email.herokuapp.com/api/email';
+        axios.post(url, this.state)
         .then(res => {
             if(res.data.success) {
                 this.setState({
@@ -66,7 +67,7 @@ class ContactMe extends React.Component {
         return (
             <div>
                 <Form style={{ fontFamily: 'Pacifico' }} onSubmit={this.onSubmit} >
-                    <h1 style={{ marginTop: "40px" }}>Let's Chat</h1>
+                    <h3 style={{ marginTop: "40px" }}>Let's Chat</h3>
                     <br></br>
                     <h4>Email is one of the best way to contact me</h4>
                     <h5>Email: Liangli0408@gmail.com</h5>
@@ -79,7 +80,7 @@ class ContactMe extends React.Component {
                         }}
                     />
 
-                    <h1>Shoot a message</h1>
+                    <h1>Send a message</h1>
                     <br></br>
 
                     <Form.Group style={{ fontSize: 18 }} >

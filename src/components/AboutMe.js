@@ -22,7 +22,8 @@ const AboutMe = (props) => {
                     <div className='col' style={{ textAlign: 'center', fontFamily: 'Georgia' }}>
 
                         {/* About me */}
-                        <h2>About</h2>
+                        <br></br>
+                        <h3>About Me</h3>
                         <br></br>
                         <p>
                             Hello, my name is Allen.
@@ -41,7 +42,7 @@ const AboutMe = (props) => {
                             }}
                         />
 
-                        <h2 >Technology</h2>
+                        <h3 >Technology</h3>
                         <br></br>
                         <p>The Technology Stacks I have worked with</p>
                         <br></br>

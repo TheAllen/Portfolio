@@ -13,6 +13,8 @@ import covidTracker from '../images/covidtracker.png';
 import visualDemo from '../vids/visualDemo1.mp4';
 import sylvanasDemo from '../vids/sylvanasVid.mp4';
 import myriadVid from '../vids/streamApp.mp4';
+import covid19Vid from '../vids/covid19Vid.mp4';
+import taskManagerVid from '../vids/taskManagerVid.mp4';
 
 
 const ProjectTab = (props) => {
@@ -51,7 +53,7 @@ const ProjectTab = (props) => {
 
 
                     </div>}
-                    content={<CardModal modalTitle="City Visualization 3D" buttonLabel="See Demo" path = 'https://github.com/TheAllen/Skyscraper3DVisualization' content="The app contains a map view of the world. Once the user click into a marker of a city, they are able enjoy a nice 3D view of a city." video={visualDemo}></CardModal>}
+                    content={<CardModal modalTitle="City Visualization 3D" buttonLabel="See Demo" path='https://github.com/TheAllen/Skyscraper3DVisualization' content="The app contains a map view of the world. Once the user click into a marker of a city, they are able enjoy a nice 3D view of a city." video={visualDemo}></CardModal>}
                 ></CardsSlide>
 
                 {lineBreak()}
@@ -69,7 +71,7 @@ const ProjectTab = (props) => {
                             <h5>JHU CSSE</h5>
                         </div>
                     }
-                    content={<CardModal modalTitle="Covid-19 Tracker" buttonLabel="See Demo" path = 'https://tracking-corona-client.herokuapp.com/' content="The objective of this project was to learn about advanced camera concepts and loading large OBJ models to a scene. Learned a lot about how to work with OpenGL."
+                    content={<CardModal modalTitle="Covid-19 Tracker" buttonLabel="See Demo" path='https://tracking-corona-client.herokuapp.com/' content="The objective of this project is to give users information of the coronavirus cases in their communities and around the world. Data source from Johns Hopkins University" video={covid19Vid}
                     ></CardModal>}
                 ></CardsSlide>
 
@@ -87,11 +89,11 @@ const ProjectTab = (props) => {
                             <h5>OpenGL</h5>
                         </div>
                     }
-                    content={<CardModal modalTitle="3D Model Loader" buttonLabel="See Demo" video = {sylvanasDemo} path = 'https://github.com/TheAllen/3DModelLoader' content="The objective of this project was to learn about advanced camera concepts and loading large OBJ models to a scene. Learned a lot about how to work with OpenGL."
+                    content={<CardModal modalTitle="3D Model Loader" buttonLabel="See Demo" video={sylvanasDemo} path='https://github.com/TheAllen/3DModelLoader' content="The objective of this project was to learn about advanced camera concepts and loading large OBJ models to a scene. Learned a lot about how to work with OpenGL."
                     ></CardModal>}
                 ></CardsSlide>
 
-                
+
 
                 {/* TODO: Add Project tab */}
 
@@ -117,7 +119,7 @@ const ProjectTab = (props) => {
                             <h5>Google OAuth2</h5>
                         </div>
                     }
-                    content={<CardModal modalTitle="Streaming App" buttonLabel="See Demo"  video={myriadVid} path='https://github.com/TheAllen'></CardModal>}
+                    content={<CardModal modalTitle="Streaming App" buttonLabel="See Demo" video={myriadVid} path='https://github.com/TheAllen' content="This app allows users to login and stream their contents with OBS and also watch other users' contents. Login system created with OAth2."></CardModal>}
                 ></CardsSlide>
 
                 {lineBreak()}
@@ -126,7 +128,7 @@ const ProjectTab = (props) => {
 
                 <CardsSlide
                     imagePath={taskmanager}
-                    title={"Myriad Streaming App"}
+                    title={"Task Manager"}
                     text={
                         <div>
 
@@ -139,7 +141,7 @@ const ProjectTab = (props) => {
                             <h5>mySQL</h5>
                         </div>
                     }
-                    content={<CardModal modalTitle="Task Manager" buttonLabel="See Demo"></CardModal>}
+                    content={<CardModal modalTitle="Task Manager" buttonLabel="See Demo" video={taskManagerVid} content="The purpose of this app is to keep users organized on their goals and tasks."></CardModal>}
                 ></CardsSlide>
 
                 {/* TODO: Add Project tab */}
@@ -154,7 +156,7 @@ const ProjectTab = (props) => {
                 </Card>
             </Col>
         </Row>
-        
+
     );
 }
 
