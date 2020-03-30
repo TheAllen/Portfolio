@@ -10,11 +10,8 @@ import {
 import classnames from 'classnames';
 
 // Components
-import CardModal from './components/CardModal';
+
 import SlideShow from './components/SlideShow';
-import CardsSlide from './components/CardsSlide';
-import Cards from './components/Cards';
-import TechCard from './components/TechCard';
 import AboutMe from './components/AboutMe';
 import ProjectsTab from './components/ProjectsTab';
 import ContactMe from './components/ContactMe';
@@ -28,7 +25,6 @@ import paris from './images/paris.jpg';
 import hk from './images/hongkong.jpg';
 import brussels from './images/brussels.JPG';
 import baliRice from './images/baliRice.JPG';
-import paulsPlatz from './images/paulsplatz.JPG';
 import islandTemp from './images/islandTemp.JPG';
 import lucerneHarbor from './images/lucerneharbor.JPG';
 import minsha from './images/desert.JPG';
@@ -48,8 +44,6 @@ import shanghai from './images/shanghai.JPG';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './components/card-style.css';
 
-//Particles
-import Particles from 'react-particles-js';
 
 
 const lineBreak = () => {
@@ -416,34 +410,6 @@ const App = (props) => {
 
 
 
-            {/* <br></br>
-            <br></br>
-            <br></br> */}
-
-            {/* <Particles
-                params={{
-                    "particles": {
-                        "number": {
-                            "value": 300
-                            
-                        },
-                        "size": {
-                            "value": 3
-                        }
-                    },
-                    "opacity": {
-                        "value": 0.7,
-                        "random": true
-                    },
-                    "interactivity": {
-                        "events": {
-                            "onhover": {
-                                "enable": true,
-                                "mode": "grab"
-                            }
-                        }
-                    }
-                }} style={{ marginTop: '-750px', height: "400px" }} /> */}
 
 
             {/* Foot component */}

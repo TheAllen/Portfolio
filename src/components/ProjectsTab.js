@@ -3,7 +3,6 @@ import { Row, Col, Card, CardTitle, CardText, CardBody, CardImg, Button } from '
 import CardsSlide from './CardsSlide';
 import CardModal from './CardModal';
 
-import bg from '../images/nyc.jpg';
 import visualization from '../images/Lyon.png';
 import sylvanas from '../images/sylvanas.png';
 import taskmanager from '../images/taskmanager.png';

@@ -1,6 +1,5 @@
 import React from 'react';
 import axios from 'axios';
-import { Row, Col } from 'reactstrap';
 import { Form, Button} from 'react-bootstrap';
 import './contactme.css';
 
