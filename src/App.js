@@ -153,7 +153,7 @@ const App = (props) => {
     return (
         // 0.35turn
         //'linear-gradient(0.35turn, #ffccff, #ebf8e1, #ccccff)'
-        <div className="Container" style={{ backgroundImage: 'linear-gradient(0.35turn, #e66465, #9198e5, #ebf8e1)', scrollBehavior: "smooth" }}>
+        <div className="Container" style={{ backgroundImage: 'linear-gradient(0.35turn, #ebf8e1, #9198e5, #ebf8e1)', scrollBehavior: "smooth" }}>
 
             <Navbar color="dark" light>
                 <NavbarBrand href="/" className="mr-auto"><div style={{ fontFamily: 'Pacifico', color: '#80d4ff' }}>
