@@ -3,12 +3,12 @@ import { Image } from 'react-bootstrap';
 import { Row, Col } from 'reactstrap';
 import Cards from '../components/Cards';
 
-import java from '../images/java.jpg';
-import node from '../images/node.png';
-import react from '../images/react.png';
-import spring from '../images/spring.png';
-import cpp from '../images/cpp.png';
-import javascript from '../images/js.png';
+// import java from '../images/java.jpg';
+// import node from '../images/node.png';
+// import react from '../images/react.png';
+// import spring from '../images/spring.png';
+// import cpp from '../images/cpp.png';
+// import javascript from '../images/js.png';
 
 const AboutMe = (props) => {
 
@@ -66,22 +66,22 @@ const AboutMe = (props) => {
                         <br></br>
                         <Row>
                             <Col xs={6} md={2}>
-                                <Image className="icon" src={java} style={{ height: "50%", marginLeft: "25px" }} roundedCircle />
+                                <Image className="icon" src={'https://i.postimg.cc/L5KxFDQ1/java.png'} style={{ height: "50%", marginLeft: "25px" }} roundedCircle />
                             </Col>
                             <Col xs={6} md={2}>
-                                <Image className="icon" src={spring} style={{ height: "50%" }} roundedCircle />
+                                <Image className="icon" src={'https://i.postimg.cc/65KMHHvs/spring.png'} style={{ height: "50%" }} roundedCircle />
                             </Col>
                             <Col xs={6} md={2}>
-                                <Image className="icon" src={javascript} style={{ height: "50%" }} rounded />
+                                <Image className="icon" src={'https://i.postimg.cc/9FBJsGdD/js.png'} style={{ height: "50%" }} rounded />
                             </Col>
                             <Col xs={6} md={2}>
-                                <Image className="icon" src={node} style={{ height: "50%" }} roundedCircle />
+                                <Image className="icon" src={'https://i.postimg.cc/cJvhK2V3/node.png'} style={{ height: "50%" }} roundedCircle />
                             </Col>
                             <Col xs={6} md={2}>
-                                <Image className="icon" src={react} style={{ height: "50%" }} roundedCircle />
+                                <Image className="icon" src={'https://i.postimg.cc/B6DCpDZQ/react.png'} style={{ height: "50%" }} roundedCircle />
                             </Col>
                             <Col xs={6} md={2}>
-                                <Image className="icon" src={cpp} style={{ height: "50%" }} rounded />
+                                <Image className="icon" src={'https://i.postimg.cc/mZYwFQ6m/cpp.png'} style={{ height: "50%" }} rounded />
                             </Col>
                         </Row>
 

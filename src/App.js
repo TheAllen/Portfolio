@@ -16,30 +16,30 @@ import AboutMe from './components/AboutMe';
 import ProjectsTab from './components/ProjectsTab';
 import ContactMe from './components/ContactMe';
 
-import bg from './images/nyc.jpg'
-import pic1 from './images/victoria.jpg'
-import pic2 from './images/tokyo.jpg'
+// import bg from './images/nyc.jpg'
+// import pic1 from './images/victoria.jpg'
+// import pic2 from './images/tokyo.jpg'
 import logo from './images/logo.jpg'
-import lucerne from './images/lucerne.jpg';
-import paris from './images/paris.jpg';
-import hk from './images/hongkong.jpg';
-import brussels from './images/brussels.JPG';
-import baliRice from './images/baliRice.JPG';
-import islandTemp from './images/islandTemp.JPG';
-import lucerneHarbor from './images/lucerneharbor.JPG';
-import minsha from './images/desert.JPG';
-import louvre from './images/louvre.JPG';
-import arc from './images/arc.JPG';
-import venice from './images/venice.JPG';
-import tirta from './images/tirtagangga.JPG';
-import parisView from './images/parisView.JPG';
-import monalisa from './images/monalisa.JPG';
-import amsterdam from './images/amsterdam.JPG'
-import innsbruck from './images/insbruck.JPG';
-import baliBeach from './images/baliBeach.JPG';
-import osakaCastle from './images/osakaCastle.JPG';
-import mtfuji from './images/mtfuji.JPG';
-import shanghai from './images/shanghai.JPG';
+// import lucerne from './images/lucerne.jpg';
+// import paris from './images/paris.jpg';
+// import hk from './images/hongkong.jpg';
+// import brussels from './images/brussels.JPG';
+// import baliRice from './images/baliRice.JPG';
+// import islandTemp from './images/islandTemp.JPG';
+// import lucerneHarbor from './images/lucerneharbor.JPG';
+// import minsha from './images/desert.JPG';
+// import louvre from './images/louvre.JPG';
+// import arc from './images/arc.JPG';
+// import venice from './images/venice.JPG';
+// import tirta from './images/tirtagangga.JPG';
+// import parisView from './images/parisView.JPG';
+// import monalisa from './images/monalisa.JPG';
+// import amsterdam from './images/amsterdam.JPG'
+// import innsbruck from './images/insbruck.JPG';
+// import baliBeach from './images/baliBeach.JPG';
+// import osakaCastle from './images/osakaCastle.JPG';
+// import mtfuji from './images/mtfuji.JPG';
+// import shanghai from './images/shanghai.JPG';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './components/card-style.css';
@@ -73,35 +73,35 @@ const App = (props) => {
 
     const items1 = [
         {
-            src: lucerneHarbor,
+            src: 'https://i.postimg.cc/tRKQsf96/lucerneharbor.jpg',
             altText: 'Slide 1',
             caption: 'Lucerne',
             header: 'Switzerland',
             key: '1'
         },
         {
-            src: lucerne,
+            src: 'https://i.postimg.cc/ZqMs1BRN/lucerne.jpg',
             altText: 'Slide 2',
             caption: '',
             header: 'Lucerne',
             key: '2'
         },
         {
-            src: amsterdam,
+            src: 'https://i.postimg.cc/rwJwCcp3/amsterdam.jpg',
             altText: 'Slide 3',
             caption: 'Amsterdam',
             header: 'Netherlands',
             key: '3'
         },
         {
-            src: innsbruck,
+            src: 'https://i.postimg.cc/66v6bC3d/insbruck.jpg',
             altText: 'Slide 3',
             caption: 'Innsbruck',
             header: 'Austria',
             key: '4'
         },
         {
-            src: shanghai,
+            src: 'https://i.postimg.cc/hGvcLd6Q/shanghai.jpg',
             altText: 'Slide 3',
             caption: 'The Bund',
             header: 'Shanghai',
@@ -112,35 +112,35 @@ const App = (props) => {
 
     const items2 = [
         {
-            src: paris,
+            src: 'https://i.postimg.cc/gkppM51W/paris.jpg',
             altText: 'Slide 1',
             caption: 'Eiffel Tower',
             header: 'Paris',
             key: '1'
         },
         {
-            src: louvre,
+            src: 'https://i.postimg.cc/JhSVjdjS/louvre.jpg',
             altText: 'Slide 2',
             caption: '',
             header: 'Louvre Museum',
             key: '2'
         },
         {
-            src: arc,
+            src: 'https://i.postimg.cc/G3FwsKtS/arc.jpg',
             altText: 'Slide 3',
             caption: '',
             header: 'Arc de Triomphe',
             key: '3'
         },
         {
-            src: parisView,
+            src: 'https://i.postimg.cc/4NPDW3z6/paris-View.jpg',
             altText: 'Slide 3',
             caption: '',
             header: 'A View of Paris',
             key: '4'
         },
         {
-            src: monalisa,
+            src: 'https://i.postimg.cc/cJp2vtSS/monalisa.jpg',
             altText: 'Slide 3',
             caption: '',
             header: 'The Mona Lisa',
@@ -192,11 +192,11 @@ const App = (props) => {
             <br></br>
             <br></br> */}
             {/* <div fluid style={{backgroundImage:{bg}, width: '100%'}}></div> */}
-            <Image src={bg} fluid style={{ width: '100%', height: '100%', position: "relative", zIndex: "0", opacity: "0.80" }}></Image>
+            <Image src={'https://i.postimg.cc/FKwM1jn9/nyc.jpg'} fluid style={{ width: '100%', height: '100%', position: "relative", zIndex: "0", opacity: "0.80" }}></Image>
 
 
 
-            <div className="ui container" style={{ marginTop: '10px', backgroundImage: 'linear-gradient(0.35turn, #ffccff, #ebf8e1, #ccccff)', borderRadius: "8px", zIndex: "1", width: '100%' }}>
+            <div className="ui container" style={{ marginTop: '10px', backgroundImage: 'linear-gradient(0.35turn, #ccccff, #ebf8e1, #ccccff)', borderRadius: "8px", zIndex: "1", width: '100%' }}>
                 <Nav className='nav nav-fill justify-content-center pill' tabs style={{ cursor: 'pointer' }}>
                     <NavItem>
                         <NavLink
@@ -282,7 +282,7 @@ const App = (props) => {
 
                                 <Col sm='6' style={{ alignSelf: 'center' }}>
                                     <Card style={{ width: '31rem' }}>
-                                        <CardImg variant='top' src={venice}></CardImg>
+                                        <CardImg variant='top' src={'https://i.postimg.cc/mZt8FNjW/venice.jpg'}></CardImg>
                                         <CardBody style={{ textAlign: 'center', fontFamily: 'Pacifico' }}>Venice, Italy</CardBody>
                                     </Card>
                                 </Col>
@@ -297,7 +297,7 @@ const App = (props) => {
 
                                 <Col sm='6' style={{ alignSelf: 'center' }}>
                                     <Card style={{ width: '31rem' }}>
-                                        <CardImg variant='top' src={pic2}></CardImg>
+                                        <CardImg variant='top' src={'https://i.postimg.cc/qvL8FzwG/tokyo.jpg'}></CardImg>
                                         <CardBody style={{ textAlign: 'center', fontFamily: 'Pacifico' }}>Looking down on top of Tokyo</CardBody>
                                     </Card>
 
@@ -316,19 +316,19 @@ const App = (props) => {
                             <Row>
                                 <Col sm='4'>
                                     <Card style={{ width: '22rem' }}>
-                                        <CardImg variant='top' src={mtfuji}></CardImg>
+                                        <CardImg variant='top' src={'https://i.postimg.cc/QC17JtV1/mtfuji.jpg'}></CardImg>
                                         <CardBody style={{ textAlign: 'center', fontFamily: 'Pacifico' }}>Mount Fuji, Japan</CardBody>
                                     </Card>
                                 </Col>
                                 <Col sm='4'>
                                     <Card style={{ width: '22rem' }}>
-                                        <CardImg variant='top' src={hk}></CardImg>
+                                        <CardImg variant='top' src={'https://i.postimg.cc/MGJ2t0qv/hongkong.jpg'}></CardImg>
                                         <CardBody style={{ textAlign: 'center', fontFamily: 'Pacifico' }}>View Morning View of Hong Kong</CardBody>
                                     </Card>
                                 </Col>
                                 <Col sm='4'>
                                     <Card style={{ width: '22rem' }}>
-                                        <CardImg variant='top' src={pic1}></CardImg>
+                                        <CardImg variant='top' src={'https://i.postimg.cc/yYWHNYLY/victoria.jpg'}></CardImg>
                                         <CardBody style={{ textAlign: 'center', fontFamily: 'Pacifico' }}>Victoria Harbor at dawn</CardBody>
                                     </Card>
                                 </Col>
@@ -340,14 +340,14 @@ const App = (props) => {
                             <Row className="justify-content-md-center" style={{ alignItems: 'center' }}>
                                 <Col xs md='auto' style={{ alignSelf: 'center' }}>
                                     <Card style={{ width: '33rem' }}>
-                                        <CardImg variant='top' src={baliRice}></CardImg>
+                                        <CardImg variant='top' src={'https://i.postimg.cc/brB4nkmY/baliRice.jpg'}></CardImg>
                                         <CardBody style={{ textAlign: 'center', fontFamily: 'Pacifico' }}>Rice field in Bali</CardBody>
                                     </Card>
                                 </Col>
 
                                 <Col md='auto' style={{ alignSelf: 'center' }}>
                                     <Card style={{ width: '33rem' }}>
-                                        <CardImg variant='top' src={tirta}></CardImg>
+                                        <CardImg variant='top' src={'https://i.postimg.cc/JzJSyyZm/tirtagangga.jpg'}></CardImg>
                                         <CardBody style={{ textAlign: 'center', fontFamily: 'Pacifico' }}>Tirta Gangga in Bali</CardBody>
                                     </Card>
                                 </Col>
@@ -358,19 +358,19 @@ const App = (props) => {
                             <Row>
                                 <Col sm='4'>
                                     <Card style={{ width: '22rem' }}>
-                                        <CardImg variant='top' src={baliBeach}></CardImg>
+                                        <CardImg variant='top' src={'https://i.postimg.cc/V6N7F5rJ/bali-Beach.jpg'}></CardImg>
                                         <CardBody style={{ textAlign: 'center', fontFamily: 'Pacifico' }}>Beach in Bali</CardBody>
                                     </Card>
                                 </Col>
                                 <Col sm='4'>
                                     <Card style={{ width: '22rem' }}>
-                                        <CardImg variant='top' src={islandTemp}></CardImg>
+                                        <CardImg variant='top' src={'https://i.postimg.cc/sxkwycnW/island-Temp.jpg'}></CardImg>
                                         <CardBody style={{ textAlign: 'center', fontFamily: 'Pacifico' }}>Tanah Lot in West Bali</CardBody>
                                     </Card>
                                 </Col>
                                 <Col sm='4'>
                                     <Card style={{ width: '22rem' }}>
-                                        <CardImg variant='top' src={osakaCastle}></CardImg>
+                                        <CardImg variant='top' src={'https://i.postimg.cc/Qd3ZJkXV/osaka-Castle.jpg'}></CardImg>
                                         <CardBody style={{ textAlign: 'center', fontFamily: 'Pacifico' }}>Osaka Castle, Japan</CardBody>
                                     </Card>
                                 </Col>
@@ -382,14 +382,14 @@ const App = (props) => {
                             <Row className="justify-content-md-center" style={{ alignItems: 'center' }}>
                                 <Col xs md='auto' style={{ alignSelf: 'center' }}>
                                     <Card style={{ width: '33rem' }}>
-                                        <CardImg variant='top' src={minsha}></CardImg>
+                                        <CardImg variant='top' src={'https://i.postimg.cc/KY9Xb6tg/desert.jpg'}></CardImg>
                                         <CardBody style={{ textAlign: 'center', fontFamily: 'Pacifico' }}>Minsha desert, China</CardBody>
                                     </Card>
                                 </Col>
 
                                 <Col md='auto' style={{ alignSelf: 'center' }}>
                                     <Card style={{ width: '33rem' }}>
-                                        <CardImg variant='top' src={brussels}></CardImg>
+                                        <CardImg variant='top' src={'https://i.postimg.cc/tTfLZFSq/brussels.jpg'}></CardImg>
                                         <CardBody style={{ textAlign: 'center', fontFamily: 'Pacifico' }}>Galeries Royales Saint-Hubert</CardBody>
                                     </Card>
                                 </Col>

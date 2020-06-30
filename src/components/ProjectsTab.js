@@ -3,11 +3,11 @@ import { Row, Col, Card, CardTitle, CardText, CardBody, CardImg, Button } from '
 import CardsSlide from './CardsSlide';
 import CardModal from './CardModal';
 
-import visualization from '../images/Lyon.png';
-import sylvanas from '../images/sylvanas.png';
-import taskmanager from '../images/taskmanager.png';
-import MyriadPic from '../images/MyriadPic.png';
-import covidTracker from '../images/covidtracker.png';
+// import visualization from '../images/Lyon.png';
+// import sylvanas from '../images/sylvanas.png';
+// import taskmanager from '../images/taskmanager.png';
+// import MyriadPic from '../images/MyriadPic.png';
+// import covidTracker from '../images/covidtracker.png';
 
 import visualDemo from '../vids/visualDemo1.mp4';
 import sylvanasDemo from '../vids/sylvanasVid.mp4';
@@ -38,7 +38,7 @@ const ProjectTab = (props) => {
 
                 {/* 3D Visualization Project */}
                 <CardsSlide
-                    imagePath={visualization}
+                    imagePath={'https://i.postimg.cc/rsjZGWgR/Lyon.png'}
                     title={"City Visualization 3D"}
                     text={<div>
                         <p>This app generates beautiful 3D models of famous Cities around the world! Using Esri ArcGIS api tools to create amazing 3D visualizations.</p>
@@ -58,7 +58,7 @@ const ProjectTab = (props) => {
                 {lineBreak()}
 
                 <CardsSlide
-                    imagePath={covidTracker}
+                    imagePath={'https://i.postimg.cc/cJfmMwL1/covidtracker.png'}
                     title={"Covid-19 Tracker"}
                     text={
                         <div>
@@ -78,7 +78,7 @@ const ProjectTab = (props) => {
 
                 {/* TODO add more projects */}
                 <CardsSlide
-                    imagePath={sylvanas}
+                    imagePath={'https://i.postimg.cc/jdjM0DZv/sylvanas.png'}
                     title={"OpenGL 3D Model"}
                     text={
                         <div>
@@ -101,7 +101,7 @@ const ProjectTab = (props) => {
             <Col sm="6">
 
                 <CardsSlide
-                    imagePath={MyriadPic}
+                    imagePath={'https://i.postimg.cc/wM4cTk02/Myriad-Pic.png'}
                     title={"Myriad Streaming App"}
                     text={
                         <div>
@@ -126,7 +126,7 @@ const ProjectTab = (props) => {
 
 
                 <CardsSlide
-                    imagePath={taskmanager}
+                    imagePath={'https://i.postimg.cc/15YJ9ydS/taskmanager.png'}
                     title={"Task Manager"}
                     text={
                         <div>

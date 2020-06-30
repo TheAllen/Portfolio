@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import TechCard from './TechCard';
 
-import frontend from '../images/frontend.png';
-import backend from '../images/backend.png';
-import database from '../images/database.png';
-import deployment from '../images/deployment.jpg';
+// import frontend from '../images/frontend.png';
+// import backend from '../images/backend.png';
+// import database from '../images/database.png';
+// import deployment from '../images/deployment.jpg';
 
 class Cards extends Component {
 
@@ -57,16 +57,16 @@ class Cards extends Component {
 
 
                     <div className="col-md-3">
-                        <TechCard imagePath={frontend} text={frontEndText}></TechCard>
+                        <TechCard imagePath={'https://i.postimg.cc/vmPmKSB0/frontend.png'} text={frontEndText}></TechCard>
                     </div>
                     <div className="col-md-3">
-                        <TechCard imagePath={backend} text={backEndText}></TechCard>
+                        <TechCard imagePath={'https://i.postimg.cc/2jL5HGfx/backend.png'} text={backEndText}></TechCard>
                     </div>
                     <div className="col-md-3">
-                        <TechCard imagePath={database} text={databaseText}></TechCard>
+                        <TechCard imagePath={'https://i.postimg.cc/YSSrQf3Y/database.png'} text={databaseText}></TechCard>
                     </div>
                     <div className="col-md-3">
-                        <TechCard imagePath={deployment} text={deploymentText}></TechCard>
+                        <TechCard imagePath={'https://i.postimg.cc/4d7XSfj3/deployment.jpg'} text={deploymentText}></TechCard>
                     </div>
 
                 </div>
