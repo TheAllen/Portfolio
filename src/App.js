@@ -1,25 +1,40 @@
-import React, { Component, useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Image, Overlay } from 'react-bootstrap';
+import React, { Component, useState } from "react";
+import { Link } from "react-router-dom";
+import { Image, Overlay } from "react-bootstrap";
 import {
-    Navbar, NavbarBrand, Nav, NavItem, NavLink,
-    Card, Button, CardBody, CardImg, Row, Col, TabPane,
-    CardTitle, CardText, TabContent, ButtonDropdown,
-    DropdownToggle, DropdownMenu, DropdownItem
-} from 'reactstrap';
-import classnames from 'classnames';
+  Navbar,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  NavLink,
+  Card,
+  Button,
+  CardBody,
+  CardImg,
+  Row,
+  Col,
+  TabPane,
+  CardTitle,
+  CardText,
+  TabContent,
+  ButtonDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem,
+} from "reactstrap";
+import classnames from "classnames";
 
 // Components
 
-import SlideShow from './components/SlideShow';
-import AboutMe from './components/AboutMe';
-import ProjectsTab from './components/ProjectsTab';
-import ContactMe from './components/ContactMe';
+import SlideShow from "./components/SlideShow";
+import AboutMe from "./components/AboutMe";
+import ProjectsTab from "./components/ProjectsTab";
+import ContactMe from "./components/ContactMe";
 
 // import bg from './images/nyc.jpg'
 // import pic1 from './images/victoria.jpg'
 // import pic2 from './images/tokyo.jpg'
-import logo from './images/logo.jpg'
+import logo from "./images/logo.jpg";
 // import lucerne from './images/lucerne.jpg';
 // import paris from './images/paris.jpg';
 // import hk from './images/hongkong.jpg';
@@ -41,392 +56,493 @@ import logo from './images/logo.jpg'
 // import mtfuji from './images/mtfuji.JPG';
 // import shanghai from './images/shanghai.JPG';
 
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './components/card-style.css';
-
-
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./components/card-style.css";
 
 const lineBreak = () => {
-    return (
-        <hr
-            style={{
-                color: 'blue',
-                height: 1
-
-            }}
-        />
-    );
+  return (
+    <hr
+      style={{
+        color: "blue",
+        height: 1,
+      }}
+    />
+  );
 };
 
-
 const App = (props) => {
+  //Tabs
+  const [activeTab, setActiveTab] = useState("1");
+  const toggle = (tab) => {
+    if (activeTab !== tab) setActiveTab(tab);
+  };
 
-    //Tabs
-    const [activeTab, setActiveTab] = useState('1');
-    const toggle = tab => {
-        if (activeTab !== tab) setActiveTab(tab);
-    }
+  //Navbar button dropdown
+  const [dropdownOpen, setOpen] = useState(false);
+  const menuToggle = () => setOpen(!dropdownOpen);
 
-    //Navbar button dropdown
-    const [dropdownOpen, setOpen] = useState(false);
-    const menuToggle = () => setOpen(!dropdownOpen);
+  const items1 = [
+    {
+      src: "https://i.postimg.cc/tRKQsf96/lucerneharbor.jpg",
+      altText: "Slide 1",
+      caption: "Lucerne",
+      header: "Switzerland",
+      key: "1",
+    },
+    {
+      src: "https://i.postimg.cc/ZqMs1BRN/lucerne.jpg",
+      altText: "Slide 2",
+      caption: "",
+      header: "Lucerne",
+      key: "2",
+    },
+    {
+      src: "https://i.postimg.cc/rwJwCcp3/amsterdam.jpg",
+      altText: "Slide 3",
+      caption: "Amsterdam",
+      header: "Netherlands",
+      key: "3",
+    },
+    {
+      src: "https://i.postimg.cc/66v6bC3d/insbruck.jpg",
+      altText: "Slide 3",
+      caption: "Innsbruck",
+      header: "Austria",
+      key: "4",
+    },
+    {
+      src: "https://i.postimg.cc/hGvcLd6Q/shanghai.jpg",
+      altText: "Slide 3",
+      caption: "The Bund",
+      header: "Shanghai",
+      key: "5",
+    },
+  ];
 
-    const items1 = [
-        {
-            src: 'https://i.postimg.cc/tRKQsf96/lucerneharbor.jpg',
-            altText: 'Slide 1',
-            caption: 'Lucerne',
-            header: 'Switzerland',
-            key: '1'
-        },
-        {
-            src: 'https://i.postimg.cc/ZqMs1BRN/lucerne.jpg',
-            altText: 'Slide 2',
-            caption: '',
-            header: 'Lucerne',
-            key: '2'
-        },
-        {
-            src: 'https://i.postimg.cc/rwJwCcp3/amsterdam.jpg',
-            altText: 'Slide 3',
-            caption: 'Amsterdam',
-            header: 'Netherlands',
-            key: '3'
-        },
-        {
-            src: 'https://i.postimg.cc/66v6bC3d/insbruck.jpg',
-            altText: 'Slide 3',
-            caption: 'Innsbruck',
-            header: 'Austria',
-            key: '4'
-        },
-        {
-            src: 'https://i.postimg.cc/hGvcLd6Q/shanghai.jpg',
-            altText: 'Slide 3',
-            caption: 'The Bund',
-            header: 'Shanghai',
-            key: '5'
-        }
+  const items2 = [
+    {
+      src: "https://i.postimg.cc/gkppM51W/paris.jpg",
+      altText: "Slide 1",
+      caption: "Eiffel Tower",
+      header: "Paris",
+      key: "1",
+    },
+    {
+      src: "https://i.postimg.cc/JhSVjdjS/louvre.jpg",
+      altText: "Slide 2",
+      caption: "",
+      header: "Louvre Museum",
+      key: "2",
+    },
+    {
+      src: "https://i.postimg.cc/G3FwsKtS/arc.jpg",
+      altText: "Slide 3",
+      caption: "",
+      header: "Arc de Triomphe",
+      key: "3",
+    },
+    {
+      src: "https://i.postimg.cc/4NPDW3z6/paris-View.jpg",
+      altText: "Slide 3",
+      caption: "",
+      header: "A View of Paris",
+      key: "4",
+    },
+    {
+      src: "https://i.postimg.cc/cJp2vtSS/monalisa.jpg",
+      altText: "Slide 3",
+      caption: "",
+      header: "The Mona Lisa",
+      key: "5",
+    },
+  ];
 
-    ];
+  return (
+    // 0.35turn
+    //'linear-gradient(0.35turn, #ffccff, #ebf8e1, #ccccff)'
+    <div
+      className="Container"
+      style={{
+        backgroundImage: "linear-gradient(0.35turn, #ebf8e1, #9198e5, #ebf8e1)",
+        scrollBehavior: "smooth",
+      }}
+    >
+      <Navbar color="dark" light>
+        <NavbarBrand href="/" className="mr-auto">
+          <div style={{ fontFamily: "Pacifico", color: "#80d4ff" }}>
+            <div className="row">
+              <img
+                alt=""
+                src={logo}
+                width="50"
+                height="50"
+                className="d-inline-block align-center"
+                style={{ borderRadius: "25px", marginLeft: "10px" }}
+              />
 
-    const items2 = [
-        {
-            src: 'https://i.postimg.cc/gkppM51W/paris.jpg',
-            altText: 'Slide 1',
-            caption: 'Eiffel Tower',
-            header: 'Paris',
-            key: '1'
-        },
-        {
-            src: 'https://i.postimg.cc/JhSVjdjS/louvre.jpg',
-            altText: 'Slide 2',
-            caption: '',
-            header: 'Louvre Museum',
-            key: '2'
-        },
-        {
-            src: 'https://i.postimg.cc/G3FwsKtS/arc.jpg',
-            altText: 'Slide 3',
-            caption: '',
-            header: 'Arc de Triomphe',
-            key: '3'
-        },
-        {
-            src: 'https://i.postimg.cc/4NPDW3z6/paris-View.jpg',
-            altText: 'Slide 3',
-            caption: '',
-            header: 'A View of Paris',
-            key: '4'
-        },
-        {
-            src: 'https://i.postimg.cc/cJp2vtSS/monalisa.jpg',
-            altText: 'Slide 3',
-            caption: '',
-            header: 'The Mona Lisa',
-            key: '5'
-        }
+              <h1 style={{ marginLeft: "10px" }}>Allen Li</h1>
+            </div>
+          </div>
+        </NavbarBrand>
 
-    ];
+        {/* <Button color="primary" >Menu</Button> */}
+        <ButtonDropdown
+          isOpen={dropdownOpen}
+          toggle={menuToggle}
+          direction="left"
+        >
+          <DropdownToggle carpet style={{ fontFamily: "Pacifico" }}>
+            Menu
+          </DropdownToggle>
+          <DropdownMenu>
+            <DropdownItem href="https://github.com/TheAllen">
+              Github
+            </DropdownItem>
+            <DropdownItem divider></DropdownItem>
+            <DropdownItem href="https://drive.google.com/file/d/1JH3Xz8qMDJlaNOOiZ320vmvFgWsuQbsh/view?usp=sharing">
+              Resume
+            </DropdownItem>
+          </DropdownMenu>
+        </ButtonDropdown>
+      </Navbar>
 
-
-    return (
-        // 0.35turn
-        //'linear-gradient(0.35turn, #ffccff, #ebf8e1, #ccccff)'
-        <div className="Container" style={{ backgroundImage: 'linear-gradient(0.35turn, #ebf8e1, #9198e5, #ebf8e1)', scrollBehavior: "smooth" }}>
-
-            <Navbar color="dark" light>
-                <NavbarBrand href="/" className="mr-auto"><div style={{ fontFamily: 'Pacifico', color: '#80d4ff' }}>
-                    <div className="row">
-
-                        <img
-                            alt=""
-                            src={logo}
-                            width="50"
-                            height="50"
-                            className="d-inline-block align-center"
-                            style={{ borderRadius: "25px", marginLeft: '10px' }}
-                        />
-
-                        <h1 style={{ marginLeft: '10px' }}>Allen Li</h1>
-                    </div>
-                </div>
-                </NavbarBrand>
-
-                {/* <Button color="primary" >Menu</Button> */}
-                <ButtonDropdown isOpen={dropdownOpen} toggle={menuToggle} direction="left">
-                    <DropdownToggle carpet style={{ fontFamily: "Pacifico" }}>Menu</DropdownToggle>
-                    <DropdownMenu >
-                        <DropdownItem href="https://github.com/TheAllen">Github</DropdownItem>
-                        <DropdownItem divider></DropdownItem>
-                        <DropdownItem>Resume</DropdownItem>
-                    </DropdownMenu>
-                </ButtonDropdown>
-
-
-            </Navbar>
-
-
-            {/* <br></br>
+      {/* <br></br>
             <br></br>
             <br></br>
             <br></br> */}
-            {/* <div fluid style={{backgroundImage:{bg}, width: '100%'}}></div> */}
-            <Image src={'https://i.postimg.cc/FKwM1jn9/nyc.jpg'} fluid style={{ width: '100%', height: '100%', position: "relative", zIndex: "0", opacity: "0.80" }}></Image>
+      {/* <div fluid style={{backgroundImage:{bg}, width: '100%'}}></div> */}
+      <Image
+        src={"https://i.postimg.cc/FKwM1jn9/nyc.jpg"}
+        fluid
+        style={{
+          width: "100%",
+          height: "100%",
+          position: "relative",
+          zIndex: "0",
+          opacity: "0.80",
+        }}
+      ></Image>
 
+      <div
+        className="ui container"
+        style={{
+          marginTop: "10px",
+          backgroundImage:
+            "linear-gradient(0.35turn, #ccccff, #ebf8e1, #ccccff)",
+          borderRadius: "8px",
+          zIndex: "1",
+          width: "100%",
+        }}
+      >
+        <Nav
+          className="nav nav-fill justify-content-center pill"
+          tabs
+          style={{ cursor: "pointer" }}
+        >
+          <NavItem>
+            <NavLink
+              className={classnames({ active: activeTab === "1" })}
+              onClick={() => {
+                toggle("1");
+              }}
+            >
+              <h4 style={{ fontFamily: "Pacifico" }}>About me</h4>
+            </NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink
+              className={classnames({ active: activeTab === "2" })}
+              onClick={() => {
+                toggle("2");
+              }}
+            >
+              <h4 style={{ fontFamily: "Pacifico" }}>Projects</h4>
+            </NavLink>
+          </NavItem>
 
+          <NavItem>
+            <NavLink
+              className={classnames({ active: activeTab === "3" })}
+              onClick={() => {
+                toggle("3");
+              }}
+            >
+              <h4 style={{ fontFamily: "Pacifico" }}>Travels</h4>
+            </NavLink>
+          </NavItem>
 
-            <div className="ui container" style={{ marginTop: '10px', backgroundImage: 'linear-gradient(0.35turn, #ccccff, #ebf8e1, #ccccff)', borderRadius: "8px", zIndex: "1", width: '100%' }}>
-                <Nav className='nav nav-fill justify-content-center pill' tabs style={{ cursor: 'pointer' }}>
-                    <NavItem>
-                        <NavLink
-                            className={classnames({ active: activeTab === '1' })}
-                            onClick={() => { toggle('1'); }}>
-                            <h4 style={{ fontFamily: 'Pacifico' }}>About me</h4>
-                        </NavLink>
-                    </NavItem>
-                    <NavItem>
-                        <NavLink
-                            className={classnames({ active: activeTab === '2' })}
-                            onClick={() => { toggle('2'); }}>
-                            <h4 style={{ fontFamily: 'Pacifico' }}>Projects</h4>
-                        </NavLink>
-                    </NavItem>
+          <NavItem>
+            <NavLink
+              className={classnames({ active: activeTab === "4" })}
+              onClick={() => {
+                toggle("4");
+              }}
+            >
+              <h4 style={{ fontFamily: "Pacifico" }}>Contact Me</h4>
+            </NavLink>
+          </NavItem>
+        </Nav>
+        <TabContent activeTab={activeTab}>
+          {/* About me 1 */}
+          <TabPane tabId="1">
+            <AboutMe></AboutMe>
+          </TabPane>
 
-                    <NavItem>
-                        <NavLink
-
-                            className={classnames({ active: activeTab === '3' })}
-                            onClick={() => { toggle('3') }}>
-                            <h4 style={{ fontFamily: 'Pacifico' }}>Travels</h4>
-                        </NavLink>
-                    </NavItem>
-
-                    <NavItem>
-                        <NavLink
-                            className={classnames({ active: activeTab === '4' })}
-                            onClick={() => { toggle('4') }}>
-                            <h4 style={{ fontFamily: 'Pacifico' }}>Contact Me</h4>
-
-                        </NavLink>
-                    </NavItem>
-                </Nav>
-                <TabContent activeTab={activeTab}>
-
-                    {/* About me 1 */}
-                    <TabPane tabId="1">
-                        <AboutMe></AboutMe>
-                    </TabPane>
-
-                    {/* Projects Tab 2 */}
-                    <TabPane tabId="2">
-                        <div>
-                            <br></br>
-                            <ProjectsTab></ProjectsTab>
-
-                        </div>
-
-                    </TabPane>
-
-                    {/* Travels */}
-                    <TabPane tabId="3">
-                        <br></br>
-                        <div style={{ fontFamily: 'pacifico' }}>
-
-                            <Row className='justify-content-md-center'>
-
-                                <h2>Seeing New Places</h2>
-
-                            </Row>
-                            <br></br>
-                            
-                            <Row className='justify-content-md-center'>
-
-
-                                <h5 >I believe that traveling is one of the most exhilarating and enlightening experiences!</h5>
-
-                            </Row>
-
-                            
-                            {lineBreak()}
-                            <br></br>
-
-                            {/* First Row */}
-                            <Row className='justify-content-md-center'>
-                                <Col xs sm='6'>
-                                    {/* Image slide show */}
-                                    <SlideShow items={items1}></SlideShow>
-                                </Col>
-
-                                {lineBreak()}
-
-                                <Col sm='6' style={{ alignSelf: 'center' }}>
-                                    <Card style={{ width: '31rem' }}>
-                                        <CardImg variant='top' src={'https://i.postimg.cc/mZt8FNjW/venice.jpg'}></CardImg>
-                                        <CardBody style={{ textAlign: 'center', fontFamily: 'Pacifico' }}>Venice, Italy</CardBody>
-                                    </Card>
-                                </Col>
-                            </Row>
-
-                            <br></br>
-                            {lineBreak()}
-                            <br></br>
-
-                            {/* Second Row */}
-                            <Row>
-
-                                <Col sm='6' style={{ alignSelf: 'center' }}>
-                                    <Card style={{ width: '31rem' }}>
-                                        <CardImg variant='top' src={'https://i.postimg.cc/qvL8FzwG/tokyo.jpg'}></CardImg>
-                                        <CardBody style={{ textAlign: 'center', fontFamily: 'Pacifico' }}>Looking down on top of Tokyo</CardBody>
-                                    </Card>
-
-                                </Col>
-
-                                <Col sm='6'>
-
-                                    <SlideShow items={items2}></SlideShow>
-                                </Col>
-
-                            </Row>
-
-                            {lineBreak()}
-
-                            {/* Third Row */}
-                            <Row>
-                                <Col sm='4'>
-                                    <Card style={{ width: '22rem' }}>
-                                        <CardImg variant='top' src={'https://i.postimg.cc/QC17JtV1/mtfuji.jpg'}></CardImg>
-                                        <CardBody style={{ textAlign: 'center', fontFamily: 'Pacifico' }}>Mount Fuji, Japan</CardBody>
-                                    </Card>
-                                </Col>
-                                <Col sm='4'>
-                                    <Card style={{ width: '22rem' }}>
-                                        <CardImg variant='top' src={'https://i.postimg.cc/MGJ2t0qv/hongkong.jpg'}></CardImg>
-                                        <CardBody style={{ textAlign: 'center', fontFamily: 'Pacifico' }}>View Morning View of Hong Kong</CardBody>
-                                    </Card>
-                                </Col>
-                                <Col sm='4'>
-                                    <Card style={{ width: '22rem' }}>
-                                        <CardImg variant='top' src={'https://i.postimg.cc/yYWHNYLY/victoria.jpg'}></CardImg>
-                                        <CardBody style={{ textAlign: 'center', fontFamily: 'Pacifico' }}>Victoria Harbor at dawn</CardBody>
-                                    </Card>
-                                </Col>
-
-                            </Row>
-
-                            {lineBreak()}
-
-                            <Row className="justify-content-md-center" style={{ alignItems: 'center' }}>
-                                <Col xs md='auto' style={{ alignSelf: 'center' }}>
-                                    <Card style={{ width: '33rem' }}>
-                                        <CardImg variant='top' src={'https://i.postimg.cc/brB4nkmY/baliRice.jpg'}></CardImg>
-                                        <CardBody style={{ textAlign: 'center', fontFamily: 'Pacifico' }}>Rice field in Bali</CardBody>
-                                    </Card>
-                                </Col>
-
-                                <Col md='auto' style={{ alignSelf: 'center' }}>
-                                    <Card style={{ width: '33rem' }}>
-                                        <CardImg variant='top' src={'https://i.postimg.cc/JzJSyyZm/tirtagangga.jpg'}></CardImg>
-                                        <CardBody style={{ textAlign: 'center', fontFamily: 'Pacifico' }}>Tirta Gangga in Bali</CardBody>
-                                    </Card>
-                                </Col>
-                            </Row>
-
-                            {lineBreak()}
-
-                            <Row>
-                                <Col sm='4'>
-                                    <Card style={{ width: '22rem' }}>
-                                        <CardImg variant='top' src={'https://i.postimg.cc/V6N7F5rJ/bali-Beach.jpg'}></CardImg>
-                                        <CardBody style={{ textAlign: 'center', fontFamily: 'Pacifico' }}>Beach in Bali</CardBody>
-                                    </Card>
-                                </Col>
-                                <Col sm='4'>
-                                    <Card style={{ width: '22rem' }}>
-                                        <CardImg variant='top' src={'https://i.postimg.cc/sxkwycnW/island-Temp.jpg'}></CardImg>
-                                        <CardBody style={{ textAlign: 'center', fontFamily: 'Pacifico' }}>Tanah Lot in West Bali</CardBody>
-                                    </Card>
-                                </Col>
-                                <Col sm='4'>
-                                    <Card style={{ width: '22rem' }}>
-                                        <CardImg variant='top' src={'https://i.postimg.cc/Qd3ZJkXV/osaka-Castle.jpg'}></CardImg>
-                                        <CardBody style={{ textAlign: 'center', fontFamily: 'Pacifico' }}>Osaka Castle, Japan</CardBody>
-                                    </Card>
-                                </Col>
-
-                            </Row>
-
-                            {lineBreak()}
-
-                            <Row className="justify-content-md-center" style={{ alignItems: 'center' }}>
-                                <Col xs md='auto' style={{ alignSelf: 'center' }}>
-                                    <Card style={{ width: '33rem' }}>
-                                        <CardImg variant='top' src={'https://i.postimg.cc/KY9Xb6tg/desert.jpg'}></CardImg>
-                                        <CardBody style={{ textAlign: 'center', fontFamily: 'Pacifico' }}>Minsha desert, China</CardBody>
-                                    </Card>
-                                </Col>
-
-                                <Col md='auto' style={{ alignSelf: 'center' }}>
-                                    <Card style={{ width: '33rem' }}>
-                                        <CardImg variant='top' src={'https://i.postimg.cc/tTfLZFSq/brussels.jpg'}></CardImg>
-                                        <CardBody style={{ textAlign: 'center', fontFamily: 'Pacifico' }}>Galeries Royales Saint-Hubert</CardBody>
-                                    </Card>
-                                </Col>
-                            </Row>
-
-                            <br></br>
-                            <br></br>
-
-                        </div>
-
-                    </TabPane>
-
-                    <TabPane tabId="4">
-                        <ContactMe></ContactMe>
-                    </TabPane>
-                </TabContent>
+          {/* Projects Tab 2 */}
+          <TabPane tabId="2">
+            <div>
+              <br></br>
+              <ProjectsTab></ProjectsTab>
             </div>
+          </TabPane>
 
+          {/* Travels */}
+          <TabPane tabId="3">
+            <br></br>
+            <div style={{ fontFamily: "pacifico" }}>
+              <Row className="justify-content-md-center">
+                <h2>Seeing New Places</h2>
+              </Row>
+              <br></br>
 
+              <Row className="justify-content-md-center">
+                <h5>
+                  I believe that traveling is one of the most exhilarating and
+                  enlightening experiences!
+                </h5>
+              </Row>
 
+              {lineBreak()}
+              <br></br>
 
+              {/* First Row */}
+              <Row className="justify-content-md-center">
+                <Col xs sm="6">
+                  {/* Image slide show */}
+                  <SlideShow items={items1}></SlideShow>
+                </Col>
 
-            {/* Foot component */}
-            <footer className="page-footer font-small blue">
+                {lineBreak()}
 
+                <Col sm="6" style={{ alignSelf: "center" }}>
+                  <Card style={{ width: "31rem" }}>
+                    <CardImg
+                      variant="top"
+                      src={"https://i.postimg.cc/mZt8FNjW/venice.jpg"}
+                    ></CardImg>
+                    <CardBody
+                      style={{ textAlign: "center", fontFamily: "Pacifico" }}
+                    >
+                      Venice, Italy
+                    </CardBody>
+                  </Card>
+                </Col>
+              </Row>
 
-                <div className="footer-copyright text-center py-3">© 2020 Copyright:
-                    <a href="https://github.com/TheAllen"> Liang J. Li</a>
-                </div>
+              <br></br>
+              {lineBreak()}
+              <br></br>
 
+              {/* Second Row */}
+              <Row>
+                <Col sm="6" style={{ alignSelf: "center" }}>
+                  <Card style={{ width: "31rem" }}>
+                    <CardImg
+                      variant="top"
+                      src={"https://i.postimg.cc/qvL8FzwG/tokyo.jpg"}
+                    ></CardImg>
+                    <CardBody
+                      style={{ textAlign: "center", fontFamily: "Pacifico" }}
+                    >
+                      Looking down on top of Tokyo
+                    </CardBody>
+                  </Card>
+                </Col>
 
-            </footer>
+                <Col sm="6">
+                  <SlideShow items={items2}></SlideShow>
+                </Col>
+              </Row>
 
+              {lineBreak()}
+
+              {/* Third Row */}
+              <Row>
+                <Col sm="4">
+                  <Card style={{ width: "22rem" }}>
+                    <CardImg
+                      variant="top"
+                      src={"https://i.postimg.cc/QC17JtV1/mtfuji.jpg"}
+                    ></CardImg>
+                    <CardBody
+                      style={{ textAlign: "center", fontFamily: "Pacifico" }}
+                    >
+                      Mount Fuji, Japan
+                    </CardBody>
+                  </Card>
+                </Col>
+                <Col sm="4">
+                  <Card style={{ width: "22rem" }}>
+                    <CardImg
+                      variant="top"
+                      src={"https://i.postimg.cc/MGJ2t0qv/hongkong.jpg"}
+                    ></CardImg>
+                    <CardBody
+                      style={{ textAlign: "center", fontFamily: "Pacifico" }}
+                    >
+                      View Morning View of Hong Kong
+                    </CardBody>
+                  </Card>
+                </Col>
+                <Col sm="4">
+                  <Card style={{ width: "22rem" }}>
+                    <CardImg
+                      variant="top"
+                      src={"https://i.postimg.cc/yYWHNYLY/victoria.jpg"}
+                    ></CardImg>
+                    <CardBody
+                      style={{ textAlign: "center", fontFamily: "Pacifico" }}
+                    >
+                      Victoria Harbor at dawn
+                    </CardBody>
+                  </Card>
+                </Col>
+              </Row>
+
+              {lineBreak()}
+
+              <Row
+                className="justify-content-md-center"
+                style={{ alignItems: "center" }}
+              >
+                <Col xs md="auto" style={{ alignSelf: "center" }}>
+                  <Card style={{ width: "33rem" }}>
+                    <CardImg
+                      variant="top"
+                      src={"https://i.postimg.cc/brB4nkmY/baliRice.jpg"}
+                    ></CardImg>
+                    <CardBody
+                      style={{ textAlign: "center", fontFamily: "Pacifico" }}
+                    >
+                      Rice field in Bali
+                    </CardBody>
+                  </Card>
+                </Col>
+
+                <Col md="auto" style={{ alignSelf: "center" }}>
+                  <Card style={{ width: "33rem" }}>
+                    <CardImg
+                      variant="top"
+                      src={"https://i.postimg.cc/JzJSyyZm/tirtagangga.jpg"}
+                    ></CardImg>
+                    <CardBody
+                      style={{ textAlign: "center", fontFamily: "Pacifico" }}
+                    >
+                      Tirta Gangga in Bali
+                    </CardBody>
+                  </Card>
+                </Col>
+              </Row>
+
+              {lineBreak()}
+
+              <Row>
+                <Col sm="4">
+                  <Card style={{ width: "22rem" }}>
+                    <CardImg
+                      variant="top"
+                      src={"https://i.postimg.cc/V6N7F5rJ/bali-Beach.jpg"}
+                    ></CardImg>
+                    <CardBody
+                      style={{ textAlign: "center", fontFamily: "Pacifico" }}
+                    >
+                      Beach in Bali
+                    </CardBody>
+                  </Card>
+                </Col>
+                <Col sm="4">
+                  <Card style={{ width: "22rem" }}>
+                    <CardImg
+                      variant="top"
+                      src={"https://i.postimg.cc/sxkwycnW/island-Temp.jpg"}
+                    ></CardImg>
+                    <CardBody
+                      style={{ textAlign: "center", fontFamily: "Pacifico" }}
+                    >
+                      Tanah Lot in West Bali
+                    </CardBody>
+                  </Card>
+                </Col>
+                <Col sm="4">
+                  <Card style={{ width: "22rem" }}>
+                    <CardImg
+                      variant="top"
+                      src={"https://i.postimg.cc/Qd3ZJkXV/osaka-Castle.jpg"}
+                    ></CardImg>
+                    <CardBody
+                      style={{ textAlign: "center", fontFamily: "Pacifico" }}
+                    >
+                      Osaka Castle, Japan
+                    </CardBody>
+                  </Card>
+                </Col>
+              </Row>
+
+              {lineBreak()}
+
+              <Row
+                className="justify-content-md-center"
+                style={{ alignItems: "center" }}
+              >
+                <Col xs md="auto" style={{ alignSelf: "center" }}>
+                  <Card style={{ width: "33rem" }}>
+                    <CardImg
+                      variant="top"
+                      src={"https://i.postimg.cc/KY9Xb6tg/desert.jpg"}
+                    ></CardImg>
+                    <CardBody
+                      style={{ textAlign: "center", fontFamily: "Pacifico" }}
+                    >
+                      Minsha desert, China
+                    </CardBody>
+                  </Card>
+                </Col>
+
+                <Col md="auto" style={{ alignSelf: "center" }}>
+                  <Card style={{ width: "33rem" }}>
+                    <CardImg
+                      variant="top"
+                      src={"https://i.postimg.cc/tTfLZFSq/brussels.jpg"}
+                    ></CardImg>
+                    <CardBody
+                      style={{ textAlign: "center", fontFamily: "Pacifico" }}
+                    >
+                      Galeries Royales Saint-Hubert
+                    </CardBody>
+                  </Card>
+                </Col>
+              </Row>
+
+              <br></br>
+              <br></br>
+            </div>
+          </TabPane>
+
+          <TabPane tabId="4">
+            <ContactMe></ContactMe>
+          </TabPane>
+        </TabContent>
+      </div>
+
+      {/* Foot component */}
+      <footer className="page-footer font-small blue">
+        <div className="footer-copyright text-center py-3">
+          © 2021 Copyright:
+          <a href="https://github.com/TheAllen"> Liang J. Li</a>
         </div>
-
-    );
-
+      </footer>
+    </div>
+  );
 };
 
 export default App;
